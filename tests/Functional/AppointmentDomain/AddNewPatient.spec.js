@@ -60,8 +60,6 @@ test('Register New Patient @Appt', async ({page}) => {
     // await expect(page.getByText('Date selected is future date')).toHaveText('Date selected is future date')
     // await patientsearch.clearBornDate()
     await patientsearch.selectBornDate(patientdetailsdata.BornDate)
-   
-    
     await patientsearch.clickOnSearchButton()
     await patientsearch.clickOnAddPatientbutton()
     //await page.goto("http://10.0.0.64:3000/cellmaUser/patient/patientDuplicateCheck")

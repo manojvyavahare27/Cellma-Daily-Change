@@ -68,7 +68,8 @@ class ServiceReferrals {
         this.linkReject=page.getByTestId('Reject')
         this.linkCompletetlyRejected=page.getByRole('cell', { name: 'Completely Reject' }).locator('span')
         this.linkAdd=page.getByRole('button', { name: 'Add', exact: true })
-        
+        this.dropdownSelectAssessment=page.getByTestId('assessment').getByLabel('Open')
+        this.btnshow=page.getByTestId('Show')
 
 
         //Close Pupup
@@ -76,6 +77,19 @@ class ServiceReferrals {
     }
 
 
+    async clickOnAcceptLink()
+    {
+        await this.linkAccept.click()
+    }
+    async clickOnShowButton()
+    {
+        await this.btnshow.click()
+    }
+    async SelectAssessment()
+    {
+        await this.dropdownSelectAssessment.click()
+        await this.page.getByRole('option', { name: 'Triage Assessment' }).click()
+    }
     async clickOnAddLink()
     {
         await this.linkAdd.click()
@@ -94,9 +108,13 @@ class ServiceReferrals {
     async enterEndDate() {
         await this.txtboxEndDate.type('31/12/2023')
     }
-    async selectStatusType() {
+    async selectStatusTypeAwaitingAcceptance() {
         await this.dropdownStatusType.click()
         await this.page.getByRole('option', { name: 'Awaiting Acceptance' }).click()
+    }
+    async selectStatusTypeAcceptedRequiresAppointment() {
+        await this.dropdownStatusType.click()
+        await this.page.getByRole('option', { name: 'Accepted Requires Appointment' }).click()
     }
     async clickOnSearchButton() {
         await this.btnSearch.click()

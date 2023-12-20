@@ -29,10 +29,17 @@ test('Service Referrals @Functional @ReferralDomain', async ({ page }) => {
     //await servicereferrals.clickonSidebarlinkAddAppointments()
     await servicereferrals.enterStartDate()
     await servicereferrals.enterEndDate()
-    await servicereferrals.selectStatusType()
+    await servicereferrals.selectStatusTypeAwaitingAcceptance()
     await servicereferrals.clickOnSearchButton()
     await servicereferrals.clickOnPatientNameLink()
     await servicereferrals.clickOnAddLink()
+    await servicereferrals.SelectAssessment()
+    await servicereferrals.clickOnShowButton()
+
+    await servicereferrals.clickOnAcceptLink()
+    await servicereferrals.selectStatusTypeAcceptedRequiresAppointment()
+    await servicereferrals.clickOnSearchButton()
+
     // await homepage.closeCellmaVersionPopup()
     // await servicereferrals.clickonSidebarlinkServiceAppointment()
     // await servicereferrals.clickonSidebarlinkHPAppointments()
