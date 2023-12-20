@@ -56,7 +56,6 @@ test('Register New Patient @Appt', async ({page}) => {
 
     //await patientsearch.selectFutureDate(patientdetailsdata.BornDate)
     
-    //await page.pause()
     //await expect(page.getByText('Date selected is future date')).toHaveText('Date selected is future date')
     //await patientsearch.clearBornDate()
     await patientsearch.selectBornDate(patientdetailsdata.BornDate)
