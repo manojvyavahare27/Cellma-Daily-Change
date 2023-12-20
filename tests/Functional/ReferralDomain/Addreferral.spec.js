@@ -78,17 +78,18 @@ test('Confirm Existing Details @Functional @ReferralDomain', async ({page}) => {
     await addreferral.selectClinicLocation()
     await addreferral.selectTeam()
     await addreferral.selectPatientcare()
-    await page.pause()
+    
     await addreferral.selectPreferredSexForAssessment()
     await addreferral.selectConsultant()
     //await page.pause()
     await addreferral.selectMethodOfArrival()
     await addreferral.enterTimeOfArrival()
-   //await page.pause()
+    await addreferral.clickOnAwaitReferralAcceptance()
+   await page.pause()
     await addreferral.clickOnSaveButton()
-    await expect(page.getByText('Referral added successfully')).toHaveText('Referral added successfully')
+    await expect(page.getByText('Awaiting referral added successfully')).toHaveText('Awaiting referral added successfully')
     
-
+    await page.pause()
     //Again select same patient.
     await menu.clickOnMenubtn()
     await menu.clickOnFindPatientlink()

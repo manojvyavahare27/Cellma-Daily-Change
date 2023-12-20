@@ -24,8 +24,13 @@ test('Service Referrals @Functional @ReferralDomain', async ({page}) => {
     await loginpage.clickOnLogin()  
     await page.pause()
     await homepage.clickOnOurPendingonReferrals()
+
     //Appointment Tab
-    // await servicereferrals.clickonSidebarlinkAddAppointments()
+     await servicereferrals.clickonSidebarlinkAddAppointments()
+     await servicereferrals.enterStartDate()
+    await servicereferrals.enterEndDate()
+    await servicereferrals.selectStatusType()
+    await servicereferrals.clickOnSearchButton()
     // await homepage.closeCellmaVersionPopup()
     // await servicereferrals.clickonSidebarlinkServiceAppointment()
     // await servicereferrals.clickonSidebarlinkHPAppointments()
