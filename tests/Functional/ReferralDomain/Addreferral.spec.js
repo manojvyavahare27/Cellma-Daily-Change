@@ -93,7 +93,7 @@ test('Confirm Existing Details @Functional @ReferralDomain', async ({page}) => {
     await menu.clickOnMenubtn()
     await menu.clickOnFindPatientlink()
 
-    //await page.pause()
+    
     //await homepage.clickOnPatientIcon()  
     //await patientsearch.clickOnSearchButton()
     await patientsearch.enterGivenName(patientdetailsdata.New_GivenName)
