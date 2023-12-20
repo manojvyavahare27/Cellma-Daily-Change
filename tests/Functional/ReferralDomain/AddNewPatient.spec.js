@@ -51,7 +51,7 @@ test('Register New Patient @Appt', async ({page}) => {
     await patientsearch.enterGivenName(patientdetailsdata.New_GivenName)
     await patientsearch.enterFamilyName(patientdetailsdata.New_FamilyName)
     await patientsearch.selectSex(patientdetailsdata.SexM)   
-    await page.pause()
+    //await page.pause()
     //await patientsearch.enterPatientIdentificationId()
 
     //await patientsearch.selectFutureDate(patientdetailsdata.BornDate)
@@ -192,7 +192,7 @@ test('Register New Patient @Appt', async ({page}) => {
     await addpip.selectPIPRelation()
     await addpip.selectPIPNextOfKin()
     await addpip.SelectPIPFamilyAwareOfIllness()
-    await page.pause()
+    //await page.pause()
    //await addpip.selectPIPIdentifierType()
    // await addpip.enterPIPIdentifier()
     //await addpip.enterExternalProfessional(pipdetailsdata.ExternalProfessional)

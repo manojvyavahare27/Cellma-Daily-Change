@@ -24,6 +24,10 @@ test('Service Referrals @Functional @ReferralDomain', async ({page}) => {
     await loginpage.clickOnLogin()  
     await page.pause()
     await homepage.clickOnOurPendingonReferrals()
+    await servicereferrals.enterStartDate()
+    await servicereferrals.enterEndDate()
+    await servicereferrals.selectStatusType()
+    await servicereferrals.clickOnSearchButton()
     //Appointment Tab
     // await servicereferrals.clickonSidebarlinkAddAppointments()
     // await homepage.closeCellmaVersionPopup()

@@ -334,14 +334,7 @@ class PatientSearch
     //Select Sex
     async selectSex(name)
     {
-        // const elem=await this.dropdown_sex.selectOption(name)
-        // if(elem!=null)
-        // {
-        //     return elem;
-        // }
-        // else{
-        //    console.log("Element not found");
-        // }
+        
         const dropdown = await this.page.$('#mui-component-select-sex');
 
         // Select the option with the desired value

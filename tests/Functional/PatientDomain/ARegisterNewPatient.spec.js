@@ -62,6 +62,7 @@ test('Register New Patient @Functional @Regression', async ({page}) => {
     // await patientsearch.enterPatientIdentifier()
     await patientsearch.enterGivenName(patientdetailsdata.New_GivenName)
     await patientsearch.enterFamilyName(patientdetailsdata.New_FamilyName)
+    
     await patientsearch.selectSex(patientdetailsdata.SexM)   
     
     //await patientsearch.enterPatientIdentificationId()
