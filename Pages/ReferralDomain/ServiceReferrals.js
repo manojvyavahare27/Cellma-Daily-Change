@@ -59,10 +59,34 @@ class ServiceReferrals
        this.sidebarlinkPreferance=page.getByRole('button', { name: 'Preferences' })
        this.sidebarlinkServiceDashboard=page.getByRole('button', { name: 'Service Dashboard' })
        this.sidebarServiceDefaultQuestion=page.getByRole('button', { name: 'Service Default Questions' })
-
+       this.txtboxStartDate=page.getByTestId('Start Date').getByPlaceholder('dd/mm/yyyy')
+       // this.txtboxStartDate=page.locator('text=')
+        this.txtboxEndDate=page.getByTestId('End Date').getByPlaceholder('dd/mm/yyyy') 
+        this.dropdownStatusType=page.getByTestId('status').getByLabel('Open')
+        this.btnSearch=page.getByTestId('Search')
 
        //Close Pupup
        this.closePopUpButton=page.getByRole('button', { name: 'cancelIcon' })
+    }
+
+
+    //Service Referral page
+    async enterStartDate()
+    {
+        await this.txtboxStartDate.type('01/12/2023')
+    }
+    async enterEndDate()
+    {
+        await this.txtboxEndDate.type('31/12/2023')
+    }
+    async selectStatusType()
+    {
+        await this.dropdownStatusType.click()
+        await this.page.getByRole('option', { name: 'Awaiting Acceptance' }).click()
+    }
+    async clickOnSearchButton()
+    {
+        await this.btnSearch.click()
     }
     async clickonClosePopup()
     {
