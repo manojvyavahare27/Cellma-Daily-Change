@@ -71,15 +71,36 @@ class ServiceReferrals {
         this.dropdownSelectAssessment=page.getByTestId('assessment').getByLabel('Open')
         this.btnshow=page.getByTestId('Show')
 
+        //Reject Referral
+        this.txtboxRejectReferralNotes=page.getByTestId('Appointment Notes')
+        this.txtboxRejectReason=page.getByTestId('Reason')
+        this.btnRejectOnPopup=page.getByTestId('CommonCellmaPopup').getByTestId('Reject')
 
         //Close Pupup
         this.closePopUpButton = page.getByRole('button', { name: 'cancelIcon' })
     }
 
+    async enterRejectReferralNotes()
+    {
+        await this.txtboxRejectReferralNotes.type("Added for testing")
+    }
+
+    async enterRejectReason()
+    {
+        await this.txtboxRejectReason.type("Rejected For testing")
+    }
+    async clickOnRejectButtonOnPopup()
+    {
+        await this.btnRejectOnPopup.click()
+    }
 
     async clickOnAcceptLink()
     {
         await this.linkAccept.click()
+    }
+    async clickOnRejectLink()
+    {
+        await this.linkReject.click()
     }
     async clickOnShowButton()
     {

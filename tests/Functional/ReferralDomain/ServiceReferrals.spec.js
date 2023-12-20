@@ -35,11 +35,19 @@ test('Service Referrals @Functional @ReferralDomain', async ({ page }) => {
     await servicereferrals.clickOnAddLink()
     await servicereferrals.SelectAssessment()
     await servicereferrals.clickOnShowButton()
-
+    await page.pause()
     await servicereferrals.clickOnAcceptLink()
+    await expect(page.getByText('Referral accepted successfully')).toHaveText('Referral accepted successfully')
+    
     await servicereferrals.selectStatusTypeAcceptedRequiresAppointment()
     await servicereferrals.clickOnSearchButton()
-
+    await servicereferrals.clickOnRejectLink()
+    await servicereferrals.enterRejectReferralNotes()
+    await servicereferrals.enterRejectReason()
+    await page.pause()
+    await servicereferrals.clickOnRejectButtonOnPopup()
+    await expect(page.getByText('Referral rejected successfully')).toHaveText('Referral rejected successfully')
+    await page.pause()
     // await homepage.closeCellmaVersionPopup()
     // await servicereferrals.clickonSidebarlinkServiceAppointment()
     // await servicereferrals.clickonSidebarlinkHPAppointments()
