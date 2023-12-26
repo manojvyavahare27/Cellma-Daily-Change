@@ -85,15 +85,54 @@ class SetRooms
       //Expand Records
       this.btnExpandRow=page.getByLabel('expandRowIconundefined')
       //Delete 5th records
-      this.delete5thChildRecord=page.getByRole('cell', { name: 'Room Schedule Activity Type : Test 1 Start Date : 01/11/2023 End Time : 05:00 End Date : 05/11/2023 Room Status : Available Start Time : 02:00 Reason : Added for testing delete hideLabel Activity Type : Test 1 Start Date : 06/11/2023 End Time : 08:00 End Date : 10/11/2023 Room Status : Available Start Time : 05:30 Reason : Added for testing 2 delete hideLabel Activity Type : Test 1 Start Date : 11/11/2023 End Time : 08:00 End Date : 15/11/2023 Room Status : Available Start Time : 05:30 Reason : Added for testing 3 delete hideLabel Activity Type : Test 1 Start Date : 16/11/2023 End Time : 08:00 End Date : 19/11/2023 Room Status : Available Start Time : 05:30 Reason : Added for testing 4 delete hideLabel Activity Type : Test 1 Start Date : 20/11/2023 End Time : 08:00 End Date : 24/11/2023 Room Status : Available Start Time : 05:30 Reason : Added for testing 4 delete hideLabel' }).getByLabel('delete').nth(4)
+      this.delete5thChildRecord=page.getByRole('cell', { name: 'Room Schedule Activity Type : Test 1 Start Date : 01/12/2023 End Time : 05:00 End Date : 05/12/2023 Room Status : Available Start Time : 02:00 Reason : Added for testing delete hideLabel Activity Type : Test 1 Start Date : 06/12/2023 End Time : 08:00 End Date : 10/12/2023 Room Status : Available Start Time : 05:30 Reason : Added for testing 2 delete hideLabel Activity Type : Test 1 Start Date : 11/12/2023 End Time : 08:00 End Date : 15/12/2023 Room Status : Available Start Time : 05:30 Reason : Added for testing 3 delete hideLabel Activity Type : Test 1 Start Date : 16/12/2023 End Time : 08:00 End Date : 19/12/2023 Room Status : Available Start Time : 05:30 Reason : Added for testing 4 delete hideLabel Activity Type : Test 1 Start Date : 20/12/2023 End Time : 08:00 End Date : 24/12/2023 Room Status : Available Start Time : 05:30 Reason : Added for testing 5 delete hideLabel' }).getByLabel('delete').nth(4)
+      this.delete4thChildRecord=page.getByLabel('delete').nth(4)
                                      //getByRole('cell', { name: 'Room Schedule Activity Type : Test 1 Start Date : 01/11/2023 End Time : 05:00 End Date : 05/11/2023 Room Status : Available Start Time : 02:00 Reason : Added for testing delete hideLabel Activity Type : Test 1 Start Date : 06/11/2023 End Time : 08:00 End Date : 10/11/2023 Room Status : Available Start Time : 05:30 Reason : Added for testing 2 delete hideLabel Activity Type : Test 1 Start Date : 11/11/2023 End Time : 08:00 End Date : 15/11/2023 Room Status : Available Start Time : 05:30 Reason : Added for testing 3 delete hideLabel Activity Type : Test 1 Start Date : 16/11/2023 End Time : 08:00 End Date : 19/11/2023 Room Status : Available Start Time : 05:30 Reason : Added for testing 4 delete hideLabel Activity Type : Test 1 Start Date : 20/11/2023 End Time : 08:00 End Date : 24/11/2023 Room Status : Available Start Time : 05:30 Reason : Added for testing 4 delete hideLabel' }).getByLabel('delete').nth(4)
       this.bntYesToDelete=page.getByTestId('Yes')
+
+      //Reschedule 3rd child record
+      this.checkbox3rdRecord=page.getByLabel('', { exact: true }).nth(3)
+      this.btnRepeatSchedule=page.getByTestId('Repeat Schedule')
+      this.txtboxEndDate=page.getByTestId('CommonCellmaPopup').getByPlaceholder('dd/mm/yyyy')
+      this.btnSaveEndDatePopup=page.getByTestId('CommonCellmaPopup').getByTestId('Save')
+
+      //Delete Room Availability (Parent)
+      this.deleteParentRecord=page.getByRole('cell', { name: 'delete', exact: true }).getByLabel('delete')
 
         //Add Additional Room
         this.linkAddAdditionalRoom=page.getByTestId('Add Additional Room Schedule')
     }
 
+    //Delete Parent record
+    async clickOnParentDeleteicon()
+    {
+      await this.deleteParentRecord.click()
+    }
+
+    //Reschedule 3rd child record
+    async clickOn3rdChildCheckbox()
+    {
+      await this.checkbox3rdRecord.click()
+    }
+    async clickOnRepeateScheduleButton()
+    {
+      this.btnRepeatSchedule.click()
+    }
+    async enterEndDateforRepearSchedule()
+    {
+      this.txtboxEndDate.type('30/12/2023')
+    }
+    async clickOnSaveButtononEndDatePopup()
+    {
+      await this.btnSaveEndDatePopup.click()
+    }
     //Delete Child Records
+    
+    //Delete 4th Record
+    async deletefourthRecord()
+    {
+      await this.delete4thChildRecord.click()
+    }
     //Delete 5th records
     async deleteFifthChildRecord()
     {

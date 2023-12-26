@@ -391,9 +391,8 @@ class ServiceBookApp
     {
         await this.page.getByRole('button', { name: 'calendar view is open, switch to year view' }).click()
         await this.page.getByRole('button', { name: '2023', exact: true }).click()
-        await this.page.getByRole('button', { name: 'Dec' }).click()
-        
-        await this.page.getByRole('gridcell', { name: '15', exact: true }).click()
+        await this.page.getByRole('button', { name: 'Dec' }).click()        
+        await this.page.getByRole('gridcell', { name: '18', exact: true }).click()
         //getByRole('gridcell', { name: '9', exact: true }).click()
     }
     async RescheduleSelectDate()
@@ -401,7 +400,7 @@ class ServiceBookApp
         await this.page.getByRole('button', { name: 'calendar view is open, switch to year view' }).click()
         await this.page.getByRole('button', { name: '2023', exact: true }).click()
         await this.page.getByRole('button', { name: 'Dec' }).click()
-        await this.page.getByRole('gridcell', { name: '29', exact: true }).click()
+        await this.page.getByRole('gridcell', { name: '28', exact: true }).click()
         //getByRole('gridcell', { name: '9', exact: true }).click()
     }
     async selecLinks()
