@@ -1,8 +1,9 @@
 {
     "HPNameLink":"Mr Prerelease AutoEst",
-    "NewAppSlot":"07:25 AM",
-    "AddEditPatientSlot":"02:10",
-    "RescheduledAppSlot":"12:10 PM",
+    "NewAppSlot":"07:50 AM",
+
+    "AddEditPatientSlot":"02:15",
+    "RescheduledAppSlot":"12:45 PM",
     "NextAvalAppSlot":"07:10"
 
 }

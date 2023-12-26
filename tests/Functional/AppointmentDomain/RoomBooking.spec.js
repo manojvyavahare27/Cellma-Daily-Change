@@ -15,6 +15,8 @@ import DidNotAttendedPatientAppointments from "../../../Pages/AppointmentDomain/
 import WaitedNotSeenPatientAppointments from "../../../Pages/AppointmentDomain/WaitedNotSeenPatientAppointments"
 import AddEditPatientAppointment from "../../../Pages/AppointmentDomain/AddEditPatientAppointment"
 import ServiceAppointment from "../../../Pages/AppointmentDomain/ServiceAppointment"
+import RoomBooking from "../../../Pages/AppointmentDomain/RoomBooking";
+import RoomDiary from "../../../Pages/AppointmentDomain/RoomDiary";
 
 //import Pool from 'mysql/lib/Pool';
 
@@ -31,6 +33,8 @@ test('Service Appointment @Appt',async ({page})=>{
     const environment=new Environment(page)
     const patientsearch=new PatientSearch(page)
     const serviceapp=new ServiceAppointment(page)  
+    const roombooking=new RoomBooking(page)
+    const roomdiary=new RoomDiary(page)
 
     await page.goto(environment.Test)
     await loginpage.enterUsername(logindata.username)
@@ -42,7 +46,19 @@ test('Service Appointment @Appt',async ({page})=>{
     await patientsearch.clickonBackButton()
     await homepage.clickOnSidebarAppointmentIcon()   
     await serviceapp.clickOnRoomBookingLink()
+    await roombooking.clickOnOpenDropdown()
+    await roombooking.clickOnSelectButton()
+    await roomdiary.clickOnSlot()
+    await roomdiary.enterRoomMeetingDuration()
+    await roomdiary.enterRoomMeetingReason()
+    await roomdiary.clicOnSaveButton()
+    await expect(page.getByText('Room booked successfully')).toHaveText('Room booked successfully')
+    await roomdiary.checkBookingConfirmationLinkClick()
+    await roomdiary.clickOnCanceMeeting()
+    
+
     await page.pause()
+
         
     })
 

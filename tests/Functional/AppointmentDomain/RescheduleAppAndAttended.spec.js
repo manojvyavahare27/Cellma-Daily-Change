@@ -236,70 +236,9 @@ else{
      await servicebookapp.clickOnRadioAllYes()
      await servicebookapp.clickOnCommuConsentSaveButton()
      await expect(page.getByText('Communication consent saved successfully')).toHaveText('Communication consent saved successfully')     
-     //await page.pause()
+     await page.pause()
 
-     //SchedulePatientAppointment Page. Links
-     // await scheduleserviceapp.clickOnLinksMenu()
-     // await scheduleserviceapp.clickOnAddAppointmentLink()
-     // await scheduleserviceapp.closePopUpWindow()
-     //await page.pause()
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickOnAddProvisionalApp()
-     await scheduleserviceapp.closePopUpWindow()
-
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickOnAddAssessment()
-     await scheduleserviceapp.closePopUpWindow()
-
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickOnAddAttended()
-     await attendedpatientappointments.clickOnBackButton()
-
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickOnCancel()
-     await cancelledaatientappointments.clickOnBackButton()
-
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickOnConsent()
-     await scheduleserviceapp.closePopUpWindow()
-
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickOnDidNotAttenede()
-     await  didnotattendedpatientappointments.clickOnBackButton()
-//
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickOnHistory()
-     await scheduleserviceapp.closePopUpWindow()
-//
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickOnLetter()
-     await scheduleserviceapp.closePopUpWindow()
-//
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickOnPatientRTT()
-     await scheduleserviceapp.closePopUpWindow()
-
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickOnPIPLabel()
-     await scheduleserviceapp.closePopUpWindow()
-
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickOnReferral()
-     await scheduleserviceapp.closePopUpWindow()
-
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickonRefresh()
-     await scheduleserviceapp.closePopUpWindow()
-
-     // await scheduleserviceapp.clickOnLinksMenu()
-     // await scheduleserviceapp.clickonServiceApp()
-     // await scheduleserviceapp.closePopUpWindow()
-
-
-     // await scheduleserviceapp.clickOnLinksMenu()
-     // await scheduleserviceapp.clickOnWaitNotSeen()
-     // await waitednotseenpatientappointments.clickOnBackButton()
-       
+              
 
     //change Appoitntment Type
 

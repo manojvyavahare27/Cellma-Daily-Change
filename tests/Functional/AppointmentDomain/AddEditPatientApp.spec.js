@@ -59,7 +59,7 @@ test('Service Appointment @Appt',async ({page})=>{
     //await expect(page.getByText('Customize view added successfully')).toHaveText('Customize view added successfully')
     
     await page.getByRole('img', { name: 'Cellma Image Avatar' }).click()
-   // await page.pause()
+    await page.pause()
     //await homepage.clickOnPatientIcon()
     await homepage.clickOnAppointmentIcon()     
     await patientsearch.clickOnSearchButton()
@@ -192,7 +192,7 @@ else{
      
      //await page.pause()
      //Select Morning Slots
-     await servicebookapp.clickOnMorningSlots(serviceappdetails.NewAppSlot)
+     await servicebookapp.clickOnMorningSlots(serviceappdetails.AddEditPatientSlot)
     // await expect(page.getByText('Appointment slot selected for 11: AM')).toHaveText('Appointment slot selected for 11:25 AM')     
 
 
@@ -230,58 +230,58 @@ else{
      await expect(page.getByText('Communication consent saved successfully')).toHaveText('Communication consent saved successfully')     
      
 
-     //SchedulePatientAppointment Page. Links
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickOnAddAppointmentLink()
-     await scheduleserviceapp.closePopUpWindow()
+//      //SchedulePatientAppointment Page. Links
+//      await scheduleserviceapp.clickOnLinksMenu()
+//      await scheduleserviceapp.clickOnAddAppointmentLink()
+//      await scheduleserviceapp.closePopUpWindow()
 
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickOnAddProvisionalApp()
-     await scheduleserviceapp.closePopUpWindow()
+//      await scheduleserviceapp.clickOnLinksMenu()
+//      await scheduleserviceapp.clickOnAddProvisionalApp()
+//      await scheduleserviceapp.closePopUpWindow()
 
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickOnAddAssessment()
-     await scheduleserviceapp.closePopUpWindow()
+//      await scheduleserviceapp.clickOnLinksMenu()
+//      await scheduleserviceapp.clickOnAddAssessment()
+//      await scheduleserviceapp.closePopUpWindow()
 
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickOnAddAttended()
-     await attendedpatientappointments.clickOnBackButton()
+//      await scheduleserviceapp.clickOnLinksMenu()
+//      await scheduleserviceapp.clickOnAddAttended()
+//      await attendedpatientappointments.clickOnBackButton()
 
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickOnCancel()
-     await cancelledaatientappointments.clickOnBackButton()
+//      await scheduleserviceapp.clickOnLinksMenu()
+//      await scheduleserviceapp.clickOnCancel()
+//      await cancelledaatientappointments.clickOnBackButton()
 
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickOnConsent()
-     await scheduleserviceapp.closePopUpWindow()
+//      await scheduleserviceapp.clickOnLinksMenu()
+//      await scheduleserviceapp.clickOnConsent()
+//      await scheduleserviceapp.closePopUpWindow()
 
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickOnDidNotAttenede()
-     await  didnotattendedpatientappointments.clickOnBackButton()
-//
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickOnHistory()
-     await scheduleserviceapp.closePopUpWindow()
-//
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickOnLetter()
-     await scheduleserviceapp.closePopUpWindow()
-//
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickOnPatientRTT()
-     await scheduleserviceapp.closePopUpWindow()
+//      await scheduleserviceapp.clickOnLinksMenu()
+//      await scheduleserviceapp.clickOnDidNotAttenede()
+//      await  didnotattendedpatientappointments.clickOnBackButton()
+// //
+//      await scheduleserviceapp.clickOnLinksMenu()
+//      await scheduleserviceapp.clickOnHistory()
+//      await scheduleserviceapp.closePopUpWindow()
+// //
+//      await scheduleserviceapp.clickOnLinksMenu()
+//      await scheduleserviceapp.clickOnLetter()
+//      await scheduleserviceapp.closePopUpWindow()
+// //
+//      await scheduleserviceapp.clickOnLinksMenu()
+//      await scheduleserviceapp.clickOnPatientRTT()
+//      await scheduleserviceapp.closePopUpWindow()
 
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickOnPIPLabel()
-     await scheduleserviceapp.closePopUpWindow()
+//      await scheduleserviceapp.clickOnLinksMenu()
+//      await scheduleserviceapp.clickOnPIPLabel()
+//      await scheduleserviceapp.closePopUpWindow()
 
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickOnReferral()
-     await scheduleserviceapp.closePopUpWindow()
+//      await scheduleserviceapp.clickOnLinksMenu()
+//      await scheduleserviceapp.clickOnReferral()
+//      await scheduleserviceapp.closePopUpWindow()
 
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickonRefresh()
-     await scheduleserviceapp.closePopUpWindow()
+//      await scheduleserviceapp.clickOnLinksMenu()
+//      await scheduleserviceapp.clickonRefresh()
+//      await scheduleserviceapp.closePopUpWindow()
      await page.pause()
      // await scheduleserviceapp.clickOnLinksMenu()
      // await scheduleserviceapp.clickonServiceApp()

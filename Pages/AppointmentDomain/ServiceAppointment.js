@@ -27,9 +27,15 @@ class ServiceAppointment
 
         this.linkRoomBooking=page.locator("xpath=//h1[normalize-space()='Room Bookings']")
         this.linkProvisionalAppointment=page.getByRole('button', { name: 'Provisional Appointments' })
+        this.btnSearch=page.getByTestId('Search')
         
         
     }
+    async clickOnSeachButton()
+    {
+        await this.btnSearch.click()
+    }
+
     async clickOnProvisionalAppLink()
     {
         await this.linkProvisionalAppointment.click()

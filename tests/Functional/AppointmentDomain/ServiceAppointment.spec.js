@@ -14,7 +14,7 @@ import AttendedPatientAppointments from "../../../Pages/AppointmentDomain/Attend
 import DidNotAttendedPatientAppointments from "../../../Pages/AppointmentDomain/DidNotAttendedPatientAppointments"
 import WaitedNotSeenPatientAppointments from "../../../Pages/AppointmentDomain/WaitedNotSeenPatientAppointments"
 import AddEditPatientAppointment from "../../../Pages/AppointmentDomain/AddEditPatientAppointment"
-
+import ServiceAppointment from "../../../Pages/AppointmentDomain/ServiceAppointment";
 //import Pool from 'mysql/lib/Pool';
 
 const logindata= JSON.parse(JSON.stringify(require("../../../TestData/PatientDomain/Login.json")))
@@ -40,6 +40,7 @@ test('Service Appointment @Appt',async ({page})=>{
     const didnotattendedpatientappointments=new DidNotAttendedPatientAppointments(page)
     const waitednotseenpatientappointments=new WaitedNotSeenPatientAppointments(page)
     const addeditpatientappointment=new AddEditPatientAppointment(page)
+    const serviceapp=new ServiceAppointment(page)
 
     await page.goto(environment.Test)
     await loginpage.enterUsername(logindata.username)
@@ -47,7 +48,7 @@ test('Service Appointment @Appt',async ({page})=>{
     await loginpage.clickOnLogin()
     await expect(page.getByText('Login success')).toHaveText('Login success')
    
-    await homepage.clickOnSidebarAppointmentIcon()   
+    await homepage.clickOnSidebarAppointmentIcon()       
+    await serviceapp.clickOnSeachButton()
     await page.pause()
-
 });
