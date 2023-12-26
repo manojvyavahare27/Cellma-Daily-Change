@@ -29,7 +29,7 @@ test('Service Appointment @AdminDomain',async ({page})=>{
     await loginpage.enter_Password(logindata.password);
     await loginpage.clickOnLogin()
     await expect(page.getByText('Login success')).toHaveText('Login success')
-    await page.pause()
+    
     await homepage.clickOnAdminIcon()     
     await setrooms.clickonBackButton()
     await homepage.clickOnAdminIcon()   
@@ -37,7 +37,7 @@ test('Service Appointment @AdminDomain',async ({page})=>{
     await siteadmin.clickOnSidebarLinkRooms()
     await setrooms.clickonBackButton()
     await siteadmin.clickOnSidebarLinkRooms()
-    await setrooms.clickOnSetRoomsSchedule()       
+   // await setrooms.clickOnSetRoomsSchedule()       
     await setrooms.clickOnSaveButton()      
 
     await expect(page.getByText('Location required')).toHaveText('Location required')
@@ -68,6 +68,7 @@ test('Service Appointment @AdminDomain',async ({page})=>{
    
     
     //Edit Room Details
+    await page.pause()
     await setrooms.ClickOnEditRoomDetails()
     await expect(page.getByText('If room availability is updated, room schedules will be reset')).toHaveText('If room availability is updated, room schedules will be reset')
     await setrooms.clickOnSaveButtonRoomAvailability() 
@@ -123,7 +124,7 @@ test('Service Appointment @AdminDomain',async ({page})=>{
     await setrooms.ClickOnAddAdditionalRoomLink1()
 
     //Add Room Schedule 4
-    await page.pause() 
+    
     await setrooms.selectRoomSchedule1ActivityType4()
     await setrooms.selectStartDateRoomSchedule4()
     await setrooms.selectEndDateRoomSchedule4()    
@@ -153,12 +154,32 @@ test('Service Appointment @AdminDomain',async ({page})=>{
     await page.pause() 
     //Expands Row
     await setrooms.clickOnExpandRowButton()
+
+    //Delete 4th and 5th Child Record
     await setrooms.deleteFifthChildRecord()
     await setrooms.clickOnYesToDelete()
     await page.pause() 
+    await expect(page.getByText('Record deleted successfully')).toHaveText('Record deleted successfully')     
+    await setrooms.deletefourthRecord()
+    await setrooms.clickOnYesToDelete()
+    await expect(page.getByText('Record deleted successfully')).toHaveText('Record deleted successfully')     
+    
+    //Reschedule 3rd Child Record
+    await setrooms.clickOn3rdChildCheckbox()
+    await setrooms.clickOnRepeateScheduleButton()
+    await setrooms.enterEndDateforRepearSchedule()
+    await setrooms.clickOnSaveButtononEndDatePopup()
+    await expect(page.getByText('Schedule repeated successfully')).toHaveText('Schedule repeated successfully')     
+    await setrooms.clickOnParentDeleteicon()
+    await setrooms.clickOnYesToDelete()
 
     
-    
+    await page.pause()
+    await page.pause()
+    await page.pause()
+    await page.pause() 
+    await page.pause()
+
 
     
                

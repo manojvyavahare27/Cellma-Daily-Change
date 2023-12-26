@@ -145,7 +145,7 @@ test('Reschedule Appointment and Attended @Appt',async ({page})=>{
      
      //await page.pause()
      //Select Morning Slots
-     await servicebookapp.clickOnMorningSlots(serviceappdetails.NewAppSlot)
+     await servicebookapp.clickOnMorningSlots(serviceappdetails.RescheduledAppSlot)
     // await expect(page.getByText('Appointment slot selected for 11: AM')).toHaveText('Appointment slot selected for 11:25 AM')     
 
     //  await servicebookapp.clickOnNextButton()     
@@ -200,7 +200,7 @@ else{
      
      //await page.pause()
      //Select Morning Slots
-     await servicebookapp.clickOnMorningSlots(serviceappdetails.NewAppSlot)
+     await servicebookapp.clickOnMorningSlots(serviceappdetails.RescheduledAppSlot)
     // await expect(page.getByText('Appointment slot selected for 11: AM')).toHaveText('Appointment slot selected for 11:25 AM')     
 
 
@@ -299,8 +299,7 @@ else{
      // await scheduleserviceapp.clickOnLinksMenu()
      // await scheduleserviceapp.clickOnWaitNotSeen()
      // await waitednotseenpatientappointments.clickOnBackButton()
-     
-    await page.pause()
+       
 
     //change Appoitntment Type
 
@@ -440,7 +439,7 @@ else{
     await scheduleserviceapp.clickOnSaveCancelledAppButton()
     await expect(page.getByText('Patient appointment cancelled successfully')).toHaveText('Patient appointment cancelled successfully')     
     
-    await page.pause()
+    //await page.pause()
 
     }
         

@@ -54,16 +54,14 @@ test('Register New Patient @Appt', async ({page}) => {
     
     //await patientsearch.enterPatientIdentificationId()
 
-    // await patientsearch.selectFutureDate()
-    
+    // await patientsearch.selectFutureDate()    
     // //await page.pause()
     // await expect(page.getByText('Date selected is future date')).toHaveText('Date selected is future date')
     // await patientsearch.clearBornDate()
     await patientsearch.selectBornDate(patientdetailsdata.BornDate)
     await patientsearch.clickOnSearchButton()
     await patientsearch.clickOnAddPatientbutton()
-    //await page.goto("http://10.0.0.64:3000/cellmaUser/patient/patientDuplicateCheck")
-    //await page.pause()
+    //await page.goto("http://10.0.0.64:3000/cellmaUser/patient/patientDuplicateCheck")    
     await patientduplicatecheck.clickOnDuplicateCheckButton()    
     await expect(page.getByText('Photo Identification required')).toHaveText('Photo Identification required')
     await expect(page.getByText('Photo Identification ID required')).toHaveText('Photo Identification ID required')

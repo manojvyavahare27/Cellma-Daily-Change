@@ -305,8 +305,7 @@ else{
     const AppType= await page.getByTestId('Appointment Type').isVisible()
     console.log(AppType)
     //await expect(AppType).toHaveText('Emergency')     
-          
-
+            
 
     //Click On Date Link
     await scheduleserviceapp.clickOnDateLink()
@@ -330,8 +329,7 @@ else{
     await scheduleserviceapp.selectAppCancellationReason()
     await scheduleserviceapp.clickOnSaveCancelledAppButton()
     await expect(page.getByText('Patient appointment cancelled successfully')).toHaveText('Patient appointment cancelled successfully')     
-    
-    await page.pause()
+   
 
     }
         
