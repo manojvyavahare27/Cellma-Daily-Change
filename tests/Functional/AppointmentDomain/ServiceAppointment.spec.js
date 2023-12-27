@@ -46,9 +46,17 @@ test('Service Appointment @Appt',async ({page})=>{
     await loginpage.enterUsername(logindata.username)
     await loginpage.enter_Password(logindata.password);
     await loginpage.clickOnLogin()
-    await expect(page.getByText('Login success')).toHaveText('Login success')
-   
+    await expect(page.getByText('Login success')).toHaveText('Login success')   
     await homepage.clickOnSidebarAppointmentIcon()       
     await serviceapp.clickOnSeachButton()
+    await serviceapp.enterStartDate(serviceappdetails.startdate)
+    await serviceapp.enterEndDate(serviceappdetails.enddate)
+    await serviceapp.clickOnSeachButton()
+    await page.pause()
+    await serviceapp.clickOnAppTypeLink()
+    await serviceapp.clickOnNewAppTypeLink()    
+    await serviceapp.clickOnChangeButton()
+    await expect(page.getByText('Appointment type has been changed successfully')).toHaveText('Appointment type has been changed successfully')     
+    
     await page.pause()
 });

@@ -6,7 +6,7 @@ class ServiceBookApp
     constructor(page)
     {
         this.page=page
-        this.afternoonSlot=page.getByTestId('Mr Prerelease AutoEst  12:05 PM')
+        this.afternoonSlot=page.getByTestId('Mr Prerelease AutoEst  12:00 PM')
 
         //links
 
@@ -136,6 +136,13 @@ class ServiceBookApp
     {
         //getByTestId('07:15 AM')
         await this.page.getByTestId(NewAppSlot).click()
+        //await this.page.getByTestId('07:05 AM')
+        //await this.selectMorningSlot.AppSlot.click()
+    }
+    async clickOnMorningSlotstoAddApp(AddPatientSlot)
+    {
+        //getByTestId('07:15 AM')
+        await this.page.getByTestId(AddPatientSlot).click()
         //await this.page.getByTestId('07:05 AM')
         //await this.selectMorningSlot.AppSlot.click()
     }

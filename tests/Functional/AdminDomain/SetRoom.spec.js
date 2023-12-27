@@ -68,7 +68,7 @@ test('Service Appointment @AdminDomain',async ({page})=>{
    
     
     //Edit Room Details
-    await page.pause()
+   // await page.pause()
     await setrooms.ClickOnEditRoomDetails()
     await expect(page.getByText('If room availability is updated, room schedules will be reset')).toHaveText('If room availability is updated, room schedules will be reset')
     await setrooms.clickOnSaveButtonRoomAvailability() 
@@ -158,7 +158,7 @@ test('Service Appointment @AdminDomain',async ({page})=>{
     //Delete 4th and 5th Child Record
     await setrooms.deleteFifthChildRecord()
     await setrooms.clickOnYesToDelete()
-    await page.pause() 
+   // await page.pause() 
     await expect(page.getByText('Record deleted successfully')).toHaveText('Record deleted successfully')     
     await setrooms.deletefourthRecord()
     await setrooms.clickOnYesToDelete()
@@ -174,10 +174,7 @@ test('Service Appointment @AdminDomain',async ({page})=>{
     await setrooms.clickOnYesToDelete()
 
     
-    await page.pause()
-    await page.pause()
-    await page.pause()
-    await page.pause() 
+    
     await page.pause()
 
 

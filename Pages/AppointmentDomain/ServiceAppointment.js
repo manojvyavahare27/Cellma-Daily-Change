@@ -28,9 +28,40 @@ class ServiceAppointment
         this.linkRoomBooking=page.locator("xpath=//h1[normalize-space()='Room Bookings']")
         this.linkProvisionalAppointment=page.getByRole('button', { name: 'Provisional Appointments' })
         this.btnSearch=page.getByTestId('Search')
-        
+        this.txtStartDate=page.getByTestId('Start Date').getByPlaceholder('dd/mm/yyyy')
+        this.txtEndDate=page.getByTestId('End Date').getByPlaceholder('dd/mm/yyyy')
+        this.linkAppType=page.getByRole('button', { name: 'New' })  
+        this.dropdownAppTypePopup=page.getByTestId('appointmentType').getByLabel('Open')
+        this.btnChangeAppTypePopup=page.getByTestId('Change')
+        this.linkLocation=page.getByRole('button', { name: 'Cath Lab Location' })
+
         
     }
+    async clickOnChangeButton()
+    {
+        await this.btnChangeAppTypePopup.click(0)
+    }
+
+    async clickOnNewAppTypeLink()
+    {
+        await this.dropdownAppTypePopup.click()
+        await this.page.getByRole('option', { name: 'Emergency' }).click()
+
+    }
+    async clickOnAppTypeLink()
+    {
+        await this.linkAppType.click()
+    }
+    async enterStartDate(startdate)
+    {
+        await this.txtStartDate.type(startdate)
+    }
+    async enterEndDate(enddate)
+    {
+        await this.txtEndDate.type(enddate)
+    }
+    
+
     async clickOnSeachButton()
     {
         await this.btnSearch.click()
