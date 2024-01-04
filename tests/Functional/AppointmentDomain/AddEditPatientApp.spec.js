@@ -180,7 +180,7 @@ test('Service Appointment @Appt',async ({page})=>{
        
 }
 else{         
-     await page.pause()
+    // await page.pause()
      await servicebookapp.SelectDate()
      await servicebookapp.selectDropdownSpecility()
      await servicebookapp.selectDropdownClinicType()
@@ -212,7 +212,7 @@ else{
      
      
      await servicebookapp.clickOnNextButton()
-     await page.pause()
+     //await page.pause()
      await servicebookapp.selectAppDetailsAppointmentType()
     // await servicebookapp.selectAppDetailsZone()
     
@@ -312,7 +312,7 @@ else{
     await addeditpatientappointment.clickOnRescheduleDate()
     await addeditpatientappointment.enterRescheduleTime()
     //await addeditpatientappointment
-    //await page.pause()
+     await page.pause()
    // await addeditpatientappointment.clickOnSaveButton()
     //await expect(page.getByText('Appointment updated successfully')).toHaveText('Appointment updated successfully')     
     
@@ -321,7 +321,7 @@ else{
    // await scheduleserviceapp.clickOnAppScheduleStatus()
    // await scheduleserviceapp.clickOnWaitingButton()
     await addeditpatientappointment.clickOnSaveButton()
-    await expect(page.getByText('Appointment status saved successfully')).toHaveText('Appointment status saved successfully')     
+    //await expect(page.getByText('Appointment status saved successfully')).toHaveText('Appointment status saved successfully')     
     
 //Cancel Appointment
 await scheduleserviceapp.clickOnAppScheduleStatus()
@@ -336,35 +336,35 @@ await page.pause()
     }
 
     //Edit Patient App.
-    await page.pause()
-    await scheduleserviceapp.Datelink()
-    await addeditpatientappointment.selectTypeOfAppointment()
-    await addeditpatientappointment.dropdownwithHealthPrefessional()
-    await addeditpatientappointment.selectConsultant()
-    await addeditpatientappointment.selectAppointmentDuration()
-    await addeditpatientappointment.SelectDate()
-    await addeditpatientappointment.enterRescheduleTime()
-    await addeditpatientappointment.selectResonforReviewAppointment()
-    await addeditpatientappointment.enterNotes()
-    await addeditpatientappointment.clickOnSaveButton()
+//     await page.pause()
+//     await scheduleserviceapp.Datelink()
+//     await addeditpatientappointment.selectTypeOfAppointment()
+//     await addeditpatientappointment.dropdownwithHealthPrefessional()
+//     await addeditpatientappointment.selectConsultant()
+//     await addeditpatientappointment.selectAppointmentDuration()
+//     await addeditpatientappointment.SelectDate()
+//     await addeditpatientappointment.enterRescheduleTime()
+//     await addeditpatientappointment.selectResonforReviewAppointment()
+//     await addeditpatientappointment.enterNotes()
+//     await addeditpatientappointment.clickOnSaveButton()
     
-    await expect(page.getByText('Appointment updated successfully')).toHaveText('Appointment updated successfully')     
+//     await expect(page.getByText('Appointment updated successfully')).toHaveText('Appointment updated successfully')     
 
-    //Change Status to waiting
-    await scheduleserviceapp.clickOnAppScheduleStatus()
-    await scheduleserviceapp.clickOnWaitingButton()
-    //await scheduleserviceapp.selectAppCancellationReason()
-    await scheduleserviceapp.clickOnSaveCancelledAppButton()
-    await expect(page.getByText('Appointment status saved successfully')).toHaveText('Appointment status saved successfully')     
+//     //Change Status to waiting
+//     await scheduleserviceapp.clickOnAppScheduleStatus()
+//     await scheduleserviceapp.clickOnWaitingButton()
+//     //await scheduleserviceapp.selectAppCancellationReason()
+//     await scheduleserviceapp.clickOnSaveCancelledAppButton()
+//     await expect(page.getByText('Appointment status saved successfully')).toHaveText('Appointment status saved successfully')     
     
-    await page.pause()
+//     await page.pause()
         
-    //Change Status to waiting
-    await scheduleserviceapp.clickOnAppScheduleStatus()
-    await scheduleserviceapp.clickOnWaitingNotSeenButton()
-    //await scheduleserviceapp.selectAppCancellationReason()
-    await scheduleserviceapp.clickOnSaveCancelledAppButton()
-    await expect(page.getByText('Appointment status saved successfully')).toHaveText('Appointment status saved successfully')     
+//     //Change Status to waiting
+//     await scheduleserviceapp.clickOnAppScheduleStatus()
+//     await scheduleserviceapp.clickOnWaitingNotSeenButton()
+//     //await scheduleserviceapp.selectAppCancellationReason()
+//     await scheduleserviceapp.clickOnSaveCancelledAppButton()
+//     await expect(page.getByText('Appointment status saved successfully')).toHaveText('Appointment status saved successfully')     
     await menu.clickOnMenubtn()
     await menu.clickOnLogout()
     

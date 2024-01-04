@@ -162,7 +162,7 @@ test('Create New User @User Domain', async ({page}) => {
 
     // Create By: Manoj V.
     // Date:30/05/2023
-
+   // 
     await adduserwizard.toggleUserIsHP()
     await adduserwizard.enterInitial(createuserdata.DocInitial)
     await adduserwizard.selectConsultant()
@@ -173,7 +173,7 @@ test('Create New User @User Domain', async ({page}) => {
     await adduserwizard.enterConstCode(createuserdata.ConsultantCode)
     await adduserwizard.enterFollowupValidity(createuserdata.FollowupConsultationValidity)    
     await adduserwizard.selectGenericHP()
-    
+    await page.pause()
     await adduserwizard.selectTeams()
     await adduserwizard.enterNPINumber(createuserdata.NPINumber)   
     await adduserwizard.selectApptEmail()

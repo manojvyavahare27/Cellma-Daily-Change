@@ -58,7 +58,7 @@ class ServiceReferrals {
         this.sidebarlinkServiceDashboard = page.getByRole('button', { name: 'Service Dashboard' })
         this.sidebarServiceDefaultQuestion = page.getByRole('button', { name: 'Service Default Questions' })
         this.txtboxStartDate = page.getByTestId('Start Date').getByPlaceholder('dd/mm/yyyy')
-        // this.txtboxStartDate=page.locator('text=')
+        
         this.txtboxEndDate = page.getByTestId('End Date').getByPlaceholder('dd/mm/yyyy')
         this.dropdownStatusType = page.getByTestId('status').getByLabel('Open')
         this.btnSearch = page.getByTestId('Search')
@@ -78,6 +78,20 @@ class ServiceReferrals {
 
         //Close Pupup
         this.closePopUpButton = page.getByRole('button', { name: 'cancelIcon' })
+
+        //Customisable Service Referral
+        this.btnSetting=page.getByTestId('Setting Button')
+        this.btnCustomizableView=page.getByRole('menuitem', { name: 'Customizable View' })
+
+    }
+    //Customisable Service Referral
+    async clickOnSettingButton()
+    {
+        await this.btnSetting.click()
+    }
+    async clickOnCustomizableViewButton()
+    {
+        await this.btnCustomizableView.click()
     }
 
     async enterRejectReferralNotes()

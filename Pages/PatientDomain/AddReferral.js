@@ -16,7 +16,7 @@ class AddReferral{
         this.txtboxreferringprofessional=page.getByLabel('Referring Professional')
         this.dropdownservice=page.getByTestId('Service').getByRole('button', { name: '​' })
         this.dropdownclinictype=page.getByTestId('Clinic Type').getByRole('button', { name: '​' })
-        this.dropdowncliniclocation=page.getByLabel('Clinic Location *')
+        this.dropdowncliniclocation=page.getByTestId('clinicLocation').getByLabel('Open')
         this.dropdownteam=page.getByLabel('Team *')
         this.dropdownpatientcare=page.getByLabel('Patient Care')
         this.dropdownpreferrersexforassessment=page.getByTestId('Preferred Sex for Assessment').getByRole('button', { name: '​' })

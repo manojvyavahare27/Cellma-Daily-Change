@@ -25,6 +25,7 @@ test('Service Referrals @Functional @ReferralDomain', async ({ page }) => {
     await page.pause()
     await homepage.clickOnOurPendingonReferrals()
 
+    
     //Appointment Tab
     //await servicereferrals.clickonSidebarlinkAddAppointments()
     await servicereferrals.enterStartDate()

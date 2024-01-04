@@ -120,7 +120,7 @@ class SetRooms
     }
     async enterEndDateforRepearSchedule()
     {
-      this.txtboxEndDate.type('30/12/2023')
+      this.txtboxEndDate.fill('30/12/2023')
     }
     async clickOnSaveButtononEndDatePopup()
     {
