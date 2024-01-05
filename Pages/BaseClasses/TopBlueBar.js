@@ -2,7 +2,7 @@ class TopBlueBar{
     constructor(page)
     {
         this.page=page
-        this.btnBannerButton=page.getByTestId(' Banner Button')
+        this.btnBannerButton=page.getByLabel('Banner Button')
         this.btn_BannerButtonKeyboadrArrow=page.getByTestId(' Banner Button').getByRole('button', { name: 'KeyboardArrowDownIcon' })
         this.link_ViewAllContactDetails=page.getByTestId('View All Contact Details')
     }

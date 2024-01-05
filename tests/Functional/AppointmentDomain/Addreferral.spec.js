@@ -20,7 +20,7 @@ import EditPatient from '../../../Pages/PatientDomain/EditPatient'
 import AddReferral from '../../../Pages/PatientDomain/AddReferral';
 
 const logindata = JSON.parse(JSON.stringify(require("../../../TestData/PatientDomain/Login.json")))
-const patientdetailsdata = JSON.parse(JSON.stringify(require("../../../TestData/ReferralDomain/PatientDetails.json")))
+const patientdetailsdata = JSON.parse(JSON.stringify(require("../../../TestData/AppointmentDomain/PatientDetails.json")))
 const pipdetailsdata = JSON.parse(JSON.stringify(require("../../../TestData/PatientDomain/PIPDetails.json")))
 const gpdata = JSON.parse(JSON.stringify(require("../../../TestData/PatientDomain/NewGPDetails.json")))
 
@@ -69,6 +69,7 @@ test('Confirm Existing Details @Functional @ReferralDomain', async ({ page }) =>
     //await addreferral.selectReferrerName()
     await addreferral.enterReferringProfessional()
     await addreferral.selectModeOfreferral()
+    await page.pause()
     await addreferral.selectService()
     await addreferral.selectClinicType()
     await addreferral.selectClinicLocation()
@@ -83,7 +84,7 @@ test('Confirm Existing Details @Functional @ReferralDomain', async ({ page }) =>
 
     await addreferral.clickOnSaveButton()
     await expect(page.getByText('Awaiting referral added successfully')).toHaveText('Awaiting referral added successfully')
-    //await page.pause()
+   // await page.pause()
     //Again select same patient.
     await menu.clickOnMenubtn()
     await menu.clickOnFindPatientlink()

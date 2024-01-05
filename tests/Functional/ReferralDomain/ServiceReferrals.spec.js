@@ -2,34 +2,52 @@ import { test, expect, Page, chromium } from '@playwright/test';
 import LoginPage from '../../../Pages/BaseClasses/LoginPage';
 import Homepage from '../../../Pages/BaseClasses/Homepage';
 import Environment from '../../../Pages/BaseClasses/Environment';
-import Menu  from '../../../Pages/BaseClasses/Menu';;
+import Menu from '../../../Pages/BaseClasses/Menu';;
 import TopBlueBar from '../../../Pages/BaseClasses/TopBlueBar';
 import AddReferral from '../../../Pages/PatientDomain/AddReferral';
 import ServiceReferrals from '../../../Pages/ReferralDomain/ServiceReferrals';
 
-const logindata= JSON.parse(JSON.stringify(require("../../../TestData/PatientDomain/Login.json")))
+const logindata = JSON.parse(JSON.stringify(require("../../../TestData/PatientDomain/Login.json")))
 
-test('Service Referrals @Functional @ReferralDomain', async ({page}) => {
-    const loginpage=new LoginPage(page)
-    const homepage=new Homepage(page)
-    const environment=new Environment(page)     
-    const menu=new Menu(page)
-    const topbluebar=new TopBlueBar(page)    
-    const addreferral=new AddReferral(page)
-    const servicereferrals=new ServiceReferrals(page)
+test('Service Referrals @Functional @ReferralDomain', async ({ page }) => {
+    const loginpage = new LoginPage(page)
+    const homepage = new Homepage(page)
+    const environment = new Environment(page)
+    const menu = new Menu(page)
+    const topbluebar = new TopBlueBar(page)
+    const addreferral = new AddReferral(page)
+    const servicereferrals = new ServiceReferrals(page)
 
-    await page.goto(environment.Test)  
+    await page.goto(environment.Test)
     await loginpage.enterUsername(logindata.username)
-    await loginpage.enter_Password(logindata.password)    
-    await loginpage.clickOnLogin()  
+    await loginpage.enter_Password(logindata.password)
+    await loginpage.clickOnLogin()
     await page.pause()
     await homepage.clickOnOurPendingonReferrals()
+    //Appointment Tab
+    //await servicereferrals.clickonSidebarlinkAddAppointments()
     await servicereferrals.enterStartDate()
     await servicereferrals.enterEndDate()
-    await servicereferrals.selectStatusType()
+    await servicereferrals.selectStatusTypeAwaitingAcceptance()
     await servicereferrals.clickOnSearchButton()
-    //Appointment Tab
-    // await servicereferrals.clickonSidebarlinkAddAppointments()
+    await servicereferrals.clickOnPatientNameLink()
+    await servicereferrals.clickOnAddLink()
+    await servicereferrals.SelectAssessment()
+    await servicereferrals.clickOnShowButton()
+
+    await servicereferrals.clickOnAcceptLink()
+    await expect(page.getByText('Referral accepted successfully')).toHaveText('Referral accepted successfully')
+
+    await servicereferrals.selectStatusTypeAcceptedRequiresAppointment()
+    await servicereferrals.clickOnSearchButton()
+    await servicereferrals.clickOnRejectLink()
+    await servicereferrals.enterRejectReferralNotes()
+    await servicereferrals.enterRejectReason()
+
+    await servicereferrals.clickOnRejectButtonOnPopup()
+    await expect(page.getByText('Referral rejected successfully')).toHaveText('Referral rejected successfully')
+    await page.pause()
+
     // await homepage.closeCellmaVersionPopup()
     // await servicereferrals.clickonSidebarlinkServiceAppointment()
     // await servicereferrals.clickonSidebarlinkHPAppointments()
@@ -80,8 +98,8 @@ test('Service Referrals @Functional @ReferralDomain', async ({page}) => {
     // await servicereferrals.clickonsidebarlinkResult()
     // await homepage.closeCellmaVersionPopup()
     // await servicereferrals.clickonsidebarTabLab()
-    
-    
+
+
     //Imaging
     // await servicereferrals.clickonsidebarTabImaging()
     // await servicereferrals.clickonsidebarlinkOutstanding()
@@ -96,13 +114,13 @@ test('Service Referrals @Functional @ReferralDomain', async ({page}) => {
     // await homepage.closeCellmaVersionPopup()
     // await servicereferrals.clickonsidebartabOutstandingInvest()
     // await servicereferrals.clickonsidebarTabOrdercomm()
-    
-   
+
+
     //Service Setting Tab
-   // await servicereferrals.clickonTabServiceSetting()
+    // await servicereferrals.clickonTabServiceSetting()
     //Service Details Tab
-    
-   // await servicereferrals.clickonTabServiceDetails()
+
+    // await servicereferrals.clickonTabServiceDetails()
     //await homepage.closeCellmaVersionPopup()
     //await servicereferrals.clickonClosePopup()
 
@@ -118,7 +136,7 @@ test('Service Referrals @Functional @ReferralDomain', async ({page}) => {
     // await homepage.closeCellmaVersionPopup()
     // await servicereferrals.clickonHideHelpSection()
     // await homepage.closeCellmaVersionPopup()
-   ////// await page.pause()
+    ////// await page.pause()
     //////await servicereferrals.clickonlinkServiceDetails()
     // await servicereferrals.clickonPreference()
     // await homepage.closeCellmaVersionPopup()
@@ -130,7 +148,7 @@ test('Service Referrals @Functional @ReferralDomain', async ({page}) => {
 
 
 
-    
+
 
 
 

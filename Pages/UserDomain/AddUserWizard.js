@@ -184,7 +184,7 @@ class AddUserWizard {
     }
     async selectSpecialty() {
         await this.dropdown_Specialty.click()
-        await this.page.getByRole('option', { name: 'Cardiology' }).click()
+        await this.page.getByRole('option', { name: 'MBBS' }).click()
     }
     async enterFirstValidity(FirstConstValidity) {
         await this.txtbox_FirstConsultationValidity.type(FirstConstValidity)
@@ -202,7 +202,7 @@ class AddUserWizard {
     async selectTeams()
     {
         await this.dropdown_Teams.click()
-        await this.page.getByRole('option', { name: 'Team 1' }).click()
+        await this.page.getByRole('option', { name: 'HP Region1' }).click()
     }
     async selectGenericHP() {
         await this.dropdown_GenericHP.click()

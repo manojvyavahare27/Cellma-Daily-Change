@@ -145,7 +145,7 @@ test('Reschedule Appointment and Attended @Appt',async ({page})=>{
      
      //await page.pause()
      //Select Morning Slots
-     await servicebookapp.clickOnMorningSlots(serviceappdetails.NewAppSlot)
+     await servicebookapp.clickOnMorningSlots(serviceappdetails.RescheduledAppSlot)
     // await expect(page.getByText('Appointment slot selected for 11: AM')).toHaveText('Appointment slot selected for 11:25 AM')     
 
     //  await servicebookapp.clickOnNextButton()     
@@ -200,7 +200,7 @@ else{
      
      //await page.pause()
      //Select Morning Slots
-     await servicebookapp.clickOnMorningSlots(serviceappdetails.NewAppSlot)
+     await servicebookapp.clickOnMorningSlots(serviceappdetails.RescheduledAppSlot)
     // await expect(page.getByText('Appointment slot selected for 11: AM')).toHaveText('Appointment slot selected for 11:25 AM')     
 
 
@@ -236,71 +236,9 @@ else{
      await servicebookapp.clickOnRadioAllYes()
      await servicebookapp.clickOnCommuConsentSaveButton()
      await expect(page.getByText('Communication consent saved successfully')).toHaveText('Communication consent saved successfully')     
-     //await page.pause()
+     await page.pause()
 
-     //SchedulePatientAppointment Page. Links
-     // await scheduleserviceapp.clickOnLinksMenu()
-     // await scheduleserviceapp.clickOnAddAppointmentLink()
-     // await scheduleserviceapp.closePopUpWindow()
-     //await page.pause()
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickOnAddProvisionalApp()
-     await scheduleserviceapp.closePopUpWindow()
-
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickOnAddAssessment()
-     await scheduleserviceapp.closePopUpWindow()
-
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickOnAddAttended()
-     await attendedpatientappointments.clickOnBackButton()
-
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickOnCancel()
-     await cancelledaatientappointments.clickOnBackButton()
-
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickOnConsent()
-     await scheduleserviceapp.closePopUpWindow()
-
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickOnDidNotAttenede()
-     await  didnotattendedpatientappointments.clickOnBackButton()
-//
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickOnHistory()
-     await scheduleserviceapp.closePopUpWindow()
-//
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickOnLetter()
-     await scheduleserviceapp.closePopUpWindow()
-//
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickOnPatientRTT()
-     await scheduleserviceapp.closePopUpWindow()
-
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickOnPIPLabel()
-     await scheduleserviceapp.closePopUpWindow()
-
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickOnReferral()
-     await scheduleserviceapp.closePopUpWindow()
-
-     await scheduleserviceapp.clickOnLinksMenu()
-     await scheduleserviceapp.clickonRefresh()
-     await scheduleserviceapp.closePopUpWindow()
-
-     // await scheduleserviceapp.clickOnLinksMenu()
-     // await scheduleserviceapp.clickonServiceApp()
-     // await scheduleserviceapp.closePopUpWindow()
-
-
-     // await scheduleserviceapp.clickOnLinksMenu()
-     // await scheduleserviceapp.clickOnWaitNotSeen()
-     // await waitednotseenpatientappointments.clickOnBackButton()
-     
-    await page.pause()
+              
 
     //change Appoitntment Type
 
@@ -345,9 +283,9 @@ else{
      await servicebookapp.ClickonSearchHPButton()
      await servicebookapp.clickOnHPnameLink(serviceappdetails.HPNameLink)       
      await servicebookapp.clickOnShowCalendarbtn() 
-     //await page.pause()
+     await page.pause()
      //await servicebookapp.clickOnMorningSlots(serviceappdetails.RescheduledAppSlot)
-     await servicebookapp.clickOnAfterNoonSlots(serviceappdetails.RescheduledAppSlot)
+     await servicebookapp.clickOnAfterNoonSlots(serviceappdetails.AgainscheduledAppSlot)
      await servicebookapp.clickOnNextButton()     
      await servicebookapp.selectAppDetailsAppointmentType()    
      await servicebookapp.selectAppDetailsAppReason()
@@ -440,7 +378,7 @@ else{
     await scheduleserviceapp.clickOnSaveCancelledAppButton()
     await expect(page.getByText('Patient appointment cancelled successfully')).toHaveText('Patient appointment cancelled successfully')     
     
-    await page.pause()
+    //await page.pause()
 
     }
         

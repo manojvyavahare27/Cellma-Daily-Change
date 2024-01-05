@@ -16,13 +16,14 @@ class AddReferral{
         this.txtboxreferringprofessional=page.getByLabel('Referring Professional')
         this.dropdownservice=page.getByTestId('Service').getByRole('button', { name: '​' })
         this.dropdownclinictype=page.getByTestId('Clinic Type').getByRole('button', { name: '​' })
-        this.dropdowncliniclocation=page.getByLabel('Clinic Location *')
+        this.dropdowncliniclocation=page.getByTestId('clinicLocation').getByLabel('Open')
         this.dropdownteam=page.getByLabel('Team *')
         this.dropdownpatientcare=page.getByLabel('Patient Care')
         this.dropdownpreferrersexforassessment=page.getByTestId('Preferred Sex for Assessment').getByRole('button', { name: '​' })
         this.dropdownconsultant=page.getByTestId('Consultant').getByRole('button', { name: '​' })
         this.dropdownmethodofarrival=page.getByLabel('Method of Arrival *')
         this.dropdowntimeofarrival=page.getByTestId('Time of Arrival').getByPlaceholder('hh:mm')
+        this.radiobuttonAwaitReferralAcceptance=page.getByLabel('Await Referral Acceptance')
         this.btnsave=page.getByTestId('Save')
         this.btnBack=page.getByLabel('Back Button')
         //await page.getByLabel('Back Button').click();
@@ -35,6 +36,10 @@ class AddReferral{
     async clickOnSaveButton()
     {
         await this.btnsave.click()
+    }
+    async clickOnAwaitReferralAcceptance()
+    {
+        await this.radiobuttonAwaitReferralAcceptance.click()
     }
     async enterTimeOfArrival()
     {
@@ -127,15 +132,15 @@ class AddReferral{
 
     async enterDateOfReferral()
     {
-        await this.dropdowndateofreferral.type("02/11/2023")
+        await this.dropdowndateofreferral.type("29/12/2023")
     }
     async enterApproveReferralDate()
     {
-        await this.dropdownApproveReferralDate.type("02/11/2023")
+        await this.dropdownApproveReferralDate.type("29/12/2023")
     }
     async enterReceiveReferrldate()
     {
-        await this.dropdownReceiveReferralDate.type("02/11/2023")
+        await this.dropdownReceiveReferralDate.type("29/12/2023")
     }
     async clickOnAddReferralBackButton()
     {

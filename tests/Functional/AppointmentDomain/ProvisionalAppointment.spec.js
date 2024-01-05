@@ -64,6 +64,7 @@ test('Provisional Appointment @Appt',async ({page})=>{
     //console.log(addReferralText)
     if(addReferralText==true)
     {  
+        await page.pause()
     await addreferral.enterReceiveReferrldate()
     await addreferral.enterApproveReferralDate()
     await addreferral.enterDateOfReferral()

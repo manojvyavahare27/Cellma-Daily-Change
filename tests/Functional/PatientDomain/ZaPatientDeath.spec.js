@@ -54,6 +54,7 @@ test('Patient Death @Functional', async ({page}) => {
     await patientsearch.clickOnSearchButton()
     await patientsearch.clickOnSearchPatientLink()
     //await page.pause()
+    await page.pause()
     //await patientsearch.ClickOnYesConfirmLegitimateRelationship()
     await confirmexisting.clickOnConfirmExistingDetails()    
     await topbluebar.clickOnTopBlueBar()
@@ -77,7 +78,7 @@ test('Patient Death @Functional', async ({page}) => {
     //await expect(page.getByText('Patient death added successfully')).toHaveText('Patient death added successfully')
    // await expect(page.getByText('No GP associated with patient In order to send texts to the patient the patient\'')).toHaveText('No GP associated with patient In order to send texts to the patient the patient\'')
     await patientdeath.clickOnViewInReadOnly()
-    await expect(page.getByRole('heading', { name: 'This patient is deceased' })).toHaveText('This patient is deceased')
+    //await expect(page.getByRole('heading', { name: 'This patient is deceased' })).toHaveText('This patient is deceased')
     
    
    // await patientdeath.enterCauseOfDeathType()

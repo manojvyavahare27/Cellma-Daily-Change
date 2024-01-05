@@ -6,7 +6,7 @@ class ServiceBookApp
     constructor(page)
     {
         this.page=page
-        this.afternoonSlot=page.getByTestId('Mr Prerelease AutoEst  12:05 PM')
+        this.afternoonSlot=page.getByTestId('Mr Prerelease AutoEst  12:00 PM')
 
         //links
 
@@ -136,6 +136,13 @@ class ServiceBookApp
     {
         //getByTestId('07:15 AM')
         await this.page.getByTestId(NewAppSlot).click()
+        //await this.page.getByTestId('07:05 AM')
+        //await this.selectMorningSlot.AppSlot.click()
+    }
+    async clickOnMorningSlotstoAddApp(AddPatientSlot)
+    {
+        //getByTestId('07:15 AM')
+        await this.page.getByTestId(AddPatientSlot).click()
         //await this.page.getByTestId('07:05 AM')
         //await this.selectMorningSlot.AppSlot.click()
     }
@@ -390,17 +397,17 @@ class ServiceBookApp
     async SelectDate()
     {
         await this.page.getByRole('button', { name: 'calendar view is open, switch to year view' }).click()
-        await this.page.getByRole('button', { name: '2023', exact: true }).click()
-        await this.page.getByRole('button', { name: 'Dec' }).click()
-        
-        await this.page.getByRole('gridcell', { name: '15', exact: true }).click()
+        await this.page.getByRole('button', { name: '2024', exact: true }).click()
+        await this.page.getByRole('button', { name: 'Jan' }).click()        
+        await this.page.getByRole('gridcell', { name: '4', exact: true }).click()
+       // getByRole('gridcell', { name: '4', exact: true })
         //getByRole('gridcell', { name: '9', exact: true }).click()
     }
     async RescheduleSelectDate()
     {
         await this.page.getByRole('button', { name: 'calendar view is open, switch to year view' }).click()
-        await this.page.getByRole('button', { name: '2023', exact: true }).click()
-        await this.page.getByRole('button', { name: 'Dec' }).click()
+        await this.page.getByRole('button', { name: '2024', exact: true }).click()
+        await this.page.getByRole('button', { name: 'Jan' }).click()
         await this.page.getByRole('gridcell', { name: '29', exact: true }).click()
         //getByRole('gridcell', { name: '9', exact: true }).click()
     }

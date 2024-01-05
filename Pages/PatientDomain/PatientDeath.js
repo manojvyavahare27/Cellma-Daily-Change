@@ -6,8 +6,8 @@ class PatientDeath
         this.txt_causeOfDeath=page.getByLabel('Search Immediate cause of Death *')
         this.checkBox_Cryptosporidiosis=page.getByRole('option', { name: 'Cryptosporidiosis' }).getByRole('checkbox')
         this.txtbox_CauseOfDeathWithCode=page.getByLabel('Search Immediate Cause of death code')
-        this.txtbox_CauseofDeathType=page.getByRole('checkbox')
-        this.checkbox_Deathtype=page.getByRole('checkbox')
+        this.txtbox_CauseofDeathType=page.getByTestId('otherCauseOfDeathType').getByLabel('Other Cause of Death Type')
+        this.checkbox_Deathtype=page.getByRole('option', { name: 'Cancer' }).getByRole('checkbox')
         this.checkboxForSearchAntecedentcauseofDeath=page.getByRole('checkbox')
         this.txtbox_Additionalnotes=page.getByLabel('Additional Notes(If any)')
         this.calendar_DateofDeath=page.getByPlaceholder('dd/mm/yyyy')
@@ -53,7 +53,7 @@ class PatientDeath
     async enterCauseOfDeathType()
     {
         await this.page.getByLabel('Other Cause of Death Type').click()
-        await this.txtbox_CauseofDeathType.type("cancer")
+        await this.txtbox_CauseofDeathType.fill('Cancer')        
         await this.checkbox_Deathtype.click()
        // await this.checkbox_Deathtype.click()
     }

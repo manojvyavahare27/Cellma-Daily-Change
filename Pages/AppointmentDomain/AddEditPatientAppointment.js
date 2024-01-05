@@ -52,12 +52,12 @@ class AddEditPatientAppointment
      async selectHealtProfessional()
      {
         await this.dropdownwithHealthPrefessional.click()
-        await this.page.getByRole('option', { name: 'Mr Prerelease AutoEst' }).click()
+        await this.page.getByRole('option', { name: 'Mr Manoj Vyavahare' }).click()
      }
      async selectConsultant()
      {
         await this.dropdownCosultant.click()
-        await this.page.getByRole('option', { name: 'Mr Prerelease AutoEst' }).click()
+        await this.page.getByRole('option', { name: 'Mr Manoj Tester' }).click()
      }
      async selectAppointmentDuration()
      {
