@@ -16,6 +16,16 @@ constructor(page)
     this.forgotpasswordlink=page.getByText('Forgot Password')
     this.closeforgotpasswordpopup=page.getByTestId('CancelIcon')
     this.txtEmailAddress=page.locator("xpath=//input[@id='Email Address']")
+
+    //Login to Rferral Portal
+    this.btnReferralPoral=page.locator("xpath=//div[contains(text(),'Referral Portal')]")
+    this.btnPharmacyPortal=page.locator("xpath=//div[contains(text(),'Pharmacy Portal')]")
+
+    this.txtUserName=page.locator("xpath=//input[@id='Username']")
+    this.txtPassword=page.locator("xpath=//input[@id='Password']")
+    this.btnLoginReferralPortal=page.locator("xpath=//div[contains(text(),'Login')]")
+    
+
 }
 
 async openUrl()

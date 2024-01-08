@@ -237,6 +237,15 @@ else{
      await servicebookapp.clickOnCommuConsentSaveButton()
      await expect(page.getByText('Communication consent saved successfully')).toHaveText('Communication consent saved successfully')     
      await page.pause()
+     
+    //  //Cancel Appointment
+    // await scheduleserviceapp.clickOnAppScheduleStatus()
+    // await scheduleserviceapp.clickOnCancelButton()
+    // await scheduleserviceapp.selectAppCancellationReason()
+    // await scheduleserviceapp.clickOnSaveCancelledAppButton()
+    // await expect(page.getByText('Patient appointment cancelled successfully')).toHaveText('Patient appointment cancelled successfully')     
+   
+
 
               
 

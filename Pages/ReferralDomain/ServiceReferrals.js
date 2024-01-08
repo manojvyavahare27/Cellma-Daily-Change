@@ -80,6 +80,35 @@ class ServiceReferrals
 
        //Close Pupup
        this.closePopUpButton=page.getByRole('button', { name: 'cancelIcon' })
+
+       
+
+       //Customisable Service Referral
+       this.btnSetting=page.getByTestId('Setting Button')
+       this.btnCustomizableView=page.getByRole('menuitem', { name: 'Customizable View' })
+    }
+
+    //Customisable Service Referral
+    async clickOnSettingButton()
+    {
+        await this.btnSetting.click()
+    }
+    async clickOnCustomizableViewButton()
+    {
+        await this.btnCustomizableView.click()
+    }
+
+    async enterRejectReferralNotes()
+    {
+        await this.txtboxRejectReferralNotes.type("Added for testing")
+    }
+    async enterRejectReason()
+    {
+        await this.txtboxRejectReason.type("Rejected For testing")
+    }
+    async clickOnRejectButtonOnPopup()
+    {
+        await this.btnRejectOnPopup.click()
     }
     async clickonClosePopup()
     {

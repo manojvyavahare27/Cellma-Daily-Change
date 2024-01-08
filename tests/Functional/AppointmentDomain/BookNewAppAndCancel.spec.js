@@ -295,7 +295,7 @@ else{
      // await waitednotseenpatientappointments.clickOnBackButton()
      
     //change Appoitntment Type
-
+     await page.pause()
     await scheduleserviceapp.ClickonAppTypeLink()
     await scheduleserviceapp.clickOnCloseAppTypePopup()
     await scheduleserviceapp.ClickonAppTypeLink()

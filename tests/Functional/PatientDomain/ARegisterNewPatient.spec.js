@@ -52,12 +52,10 @@ test('Register New Patient @Functional @Regression', async ({ page }) => {
   //await page.waitForTimeout(3000) 
   await homepage.clickOnPatientIcon()
 
-  //await page.pause()
+  await page.pause()
   //await page.goto("http://10.0.0.64:3000/cellmaUser/patient/patientSearch")  
   //await page.pause()
   await patientsearch.clickOnSearchButton()
-
-<<<<<<< HEAD
     // await expect(page.getByText('Identifier required')).toHaveText('Identifier required')
     // await expect(page.getByText('Identification Id required')).toHaveText('Identification Id required')
     // await patientsearch.enterPatientIdentifier()
@@ -67,14 +65,14 @@ test('Register New Patient @Functional @Regression', async ({ page }) => {
     await patientsearch.selectSex(patientdetailsdata.SexM)   
     
     //await patientsearch.enterPatientIdentificationId()
-=======
+
   // await expect(page.getByText('Identifier required')).toHaveText('Identifier required')
   // await expect(page.getByText('Identification Id required')).toHaveText('Identification Id required')
   // await patientsearch.enterPatientIdentifier()
   await patientsearch.enterGivenName(patientdetailsdata.New_GivenName)
   await patientsearch.enterFamilyName(patientdetailsdata.New_FamilyName)
   await patientsearch.selectSex(patientdetailsdata.SexM)
->>>>>>> develop
+
 
   //await patientsearch.enterPatientIdentificationId()
 

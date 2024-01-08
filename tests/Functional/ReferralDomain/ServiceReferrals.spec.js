@@ -22,7 +22,7 @@ test('Service Referrals @Functional @ReferralDomain', async ({ page }) => {
     await loginpage.enterUsername(logindata.username)
     await loginpage.enter_Password(logindata.password)
     await loginpage.clickOnLogin()
-    await page.pause()
+    //await page.pause()
     await homepage.clickOnOurPendingonReferrals()
     //Appointment Tab
     //await servicereferrals.clickonSidebarlinkAddAppointments()
@@ -30,6 +30,7 @@ test('Service Referrals @Functional @ReferralDomain', async ({ page }) => {
     await servicereferrals.enterEndDate()
     await servicereferrals.selectStatusTypeAwaitingAcceptance()
     await servicereferrals.clickOnSearchButton()
+    await page.pause()
     await servicereferrals.clickOnPatientNameLink()
     await servicereferrals.clickOnAddLink()
     await servicereferrals.SelectAssessment()
@@ -39,6 +40,7 @@ test('Service Referrals @Functional @ReferralDomain', async ({ page }) => {
     await expect(page.getByText('Referral accepted successfully')).toHaveText('Referral accepted successfully')
 
     await servicereferrals.selectStatusTypeAcceptedRequiresAppointment()
+    await page.pause()
     await servicereferrals.clickOnSearchButton()
     await servicereferrals.clickOnRejectLink()
     await servicereferrals.enterRejectReferralNotes()

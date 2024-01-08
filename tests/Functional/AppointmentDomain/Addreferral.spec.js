@@ -69,7 +69,7 @@ test('Confirm Existing Details @Functional @ReferralDomain', async ({ page }) =>
     //await addreferral.selectReferrerName()
     await addreferral.enterReferringProfessional()
     await addreferral.selectModeOfreferral()
-    await page.pause()
+    //await page.pause()
     await addreferral.selectService()
     await addreferral.selectClinicType()
     await addreferral.selectClinicLocation()
