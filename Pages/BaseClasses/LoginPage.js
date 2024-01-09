@@ -18,14 +18,31 @@ constructor(page)
     this.txtEmailAddress=page.locator("xpath=//input[@id='Email Address']")
 
     //Login to Rferral Portal
-    this.btnReferralPoral=page.locator("xpath=//div[contains(text(),'Referral Portal')]")
-    this.btnPharmacyPortal=page.locator("xpath=//div[contains(text(),'Pharmacy Portal')]")
+   
 
     this.txtUserName=page.locator("xpath=//input[@id='Username']")
     this.txtPassword=page.locator("xpath=//input[@id='Password']")
     this.btnLoginReferralPortal=page.locator("xpath=//div[contains(text(),'Login')]")
     
 
+}
+
+async openReferralPortal()
+{
+    await this.page.goto("http://10.0.0.106:3001/cellmaPortal/portal/login")
+}
+
+async enterReferralPortalUserName(username)
+{
+    await this.txtUserName.fill(username)
+}
+async enterRefrralPortalPassword(password)
+{
+    await this.txtPassword.fill(password)
+}
+async clickOnReferralPortalLoginButton()
+{
+    await this.btnLoginReferralPortal.click()
 }
 
 async openUrl()
