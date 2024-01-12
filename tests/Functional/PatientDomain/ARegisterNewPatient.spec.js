@@ -44,6 +44,7 @@ test('Register New Patient @Functional @Regression', async ({ page }) => {
   await loginpage.enter_Password(logindata.password)
   await loginpage.clickOnLogin()
 
+  console.log("Login Successfully")
   await homepage.clickOnPatientIcon()
   await patientsearch.clickOnSearchButton()
   // await expect(page.getByText('Identifier required')).toHaveText('Identifier required')
