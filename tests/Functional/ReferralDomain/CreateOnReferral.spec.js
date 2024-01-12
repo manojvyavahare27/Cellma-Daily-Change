@@ -55,7 +55,7 @@ test('Create On Referral @Functional @ReferralDomain', async ({ page }) => {
     await homepage.clickOnSideIconRejectedReferrals()
     await rejectserviceonreferral.clickOnMainLinks()
     await rejectserviceonreferral.clickOnLinkCreateServiceOnReferral()
-    
+    await page.pause()
     await rejectserviceonreferral.selectPatientName()
     await createonreferral.selectConsultantdropdown()
     await createonreferral.enterDateOfReferral()

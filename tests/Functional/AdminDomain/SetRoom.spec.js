@@ -139,7 +139,7 @@ test('Service Appointment @AdminDomain',async ({page})=>{
     await setrooms.ClickOnAddAdditionalRoomLink1()
 
     //Add Room Schedule 5
-    await page.pause() 
+   // await page.pause() 
     await setrooms.selectRoomSchedule1ActivityType5()
     await setrooms.selectStartDateRoomSchedule5()
     await setrooms.selectEndDateRoomSchedule5()    
@@ -151,7 +151,7 @@ test('Service Appointment @AdminDomain',async ({page})=>{
     await setrooms.clickOnSaveButtonRoomSchedule5()
     //await expect(page.getByText('Room schedule set successfully')).toHaveText('Room schedule set successfully')     
     await setrooms.ClickOnEditRoomDetails()
-    await page.pause() 
+    //await page.pause() 
     //Expands Row
     await setrooms.clickOnExpandRowButton()
 
@@ -175,7 +175,7 @@ test('Service Appointment @AdminDomain',async ({page})=>{
 
     
     
-    await page.pause()
+   // await page.pause()
 
 
     

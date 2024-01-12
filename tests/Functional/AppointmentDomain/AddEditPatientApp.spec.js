@@ -59,7 +59,7 @@ test('Service Appointment @Appt',async ({page})=>{
     //await expect(page.getByText('Customize view added successfully')).toHaveText('Customize view added successfully')
     
     await page.getByRole('img', { name: 'Cellma Image Avatar' }).click()
-    await page.pause()
+    //await page.pause()
     //await homepage.clickOnPatientIcon()
     await homepage.clickOnAppointmentIcon()     
     await patientsearch.clickOnSearchButton()
@@ -159,7 +159,7 @@ test('Service Appointment @Appt',async ({page})=>{
      //await page.pause()
      await servicebookapp.selectAppDetailsAppointmentType()
     // await servicebookapp.selectAppDetailsZone()
-    await page.pause()
+    //await page.pause()
      await servicebookapp.selectAppDetailsAppReason()
      await servicebookapp.selectSendAppTextEmail()
      await servicebookapp.selectPatientType()

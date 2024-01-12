@@ -257,8 +257,8 @@ else{
     await scheduleserviceapp.selectAppTypeDropdown()
     await scheduleserviceapp.clickOnChangeButton()
     await expect(page.getByText('Appointment type has been changed successfully')).toHaveText('Appointment type has been changed successfully')     
-    const AppType= await page.getByTestId('Appointment Type').isVisible()
-    console.log(AppType)
+    // const AppType= await page.getByTestId('Appointment Type').isVisible()
+    // console.log(AppType)
     //await expect(AppType).toHaveText('Emergency')     
     
         
@@ -272,6 +272,7 @@ else{
     //Change App Status
 //     const AppStatus=await page.getByTestId('Status').isVisible()
 //     if(AppStatus=="Scheduled")
+
 
  //Change status to Reschedule Appointment
  await scheduleserviceapp.clickOnAppScheduleStatus()
@@ -292,7 +293,7 @@ else{
      await servicebookapp.ClickonSearchHPButton()
      await servicebookapp.clickOnHPnameLink(serviceappdetails.HPNameLink)       
      await servicebookapp.clickOnShowCalendarbtn() 
-     await page.pause()
+    // await page.pause()
      //await servicebookapp.clickOnMorningSlots(serviceappdetails.RescheduledAppSlot)
      await servicebookapp.clickOnAfterNoonSlots(serviceappdetails.AgainscheduledAppSlot)
      await servicebookapp.clickOnNextButton()     

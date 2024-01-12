@@ -17,6 +17,7 @@ class PatientSearchCustomizable {
     {
         await this.btnOkResetToDefaultView.click()
     }
+    
 
 }
 module.exports=PatientSearchCustomizable

@@ -59,12 +59,12 @@ test('Provisional Appointment @Appt',async ({page})=>{
     await expect(page.getByText('Patient List Found')).toHaveText('Patient List Found') 
     await patientsearch.clickOnSearchPatientLink()
     await confirmexisting.clickOnConfirmExistingDetails() 
-    await page.pause()
+    //await page.pause()
     const addReferralText= await page.locator("xpath=//div/h1[text()='Add a Referral']").isVisible()   
     //console.log(addReferralText)
     if(addReferralText==true)
     {  
-        await page.pause()
+       // await page.pause()
     await addreferral.enterReceiveReferrldate()
     await addreferral.enterApproveReferralDate()
     await addreferral.enterDateOfReferral()
@@ -85,7 +85,7 @@ test('Provisional Appointment @Appt',async ({page})=>{
     await addreferral.enterTimeOfArrival()   
     await addreferral.clickOnSaveButton()
     await expect(page.getByText('Referral added successfully')).toHaveText('Referral added successfully')
-    await page.pause()
+   // await page.pause()
     await provisionalapp.clickOnProvisionalApp()
 
     }
@@ -110,7 +110,7 @@ test('Provisional Appointment @Appt',async ({page})=>{
     await provisionalapp.enterNotes()
     await provisionalapp.clickOnSaveProvisionalApp()    
     await expect(page.getByText('Provisional appointment booked successfully')).toHaveText('Provisional appointment booked successfully')
-    await page.pause()
+    //await page.pause()
     }
 
 })
