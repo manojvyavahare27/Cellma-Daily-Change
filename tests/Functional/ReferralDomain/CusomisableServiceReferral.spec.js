@@ -25,7 +25,6 @@ test('Service Referrals @Functional @ReferralDomain', async ({ page }) => {
     await loginpage.enter_Password(logindata.password)
     await loginpage.clickOnLogin()
     
-    await page.pause()
     await homepage.clickOnSideIconReferrals()
     await servicereferrals.clickOnSettingButton()
     await servicereferrals.clickOnCustomizableViewButton()
@@ -42,9 +41,6 @@ test('Service Referrals @Functional @ReferralDomain', async ({ page }) => {
     await servicereferralcustom.clickOnOkButton()
     //await expect(page.getByText('Customize view updated successfully')).toHaveText('Customize view updated successfully')
 
-
-
-    await page.pause()
 
 
 });

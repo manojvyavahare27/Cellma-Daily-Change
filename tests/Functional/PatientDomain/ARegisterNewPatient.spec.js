@@ -39,36 +39,21 @@ test('Register New Patient @Functional @Regression', async ({ page }) => {
   const menu = new Menu(page)
 
   await page.goto(environment.Test)
-  //await page.pause()
-  //await expect(page).toHaveURL("http://10.0.0.64:3000/cellmaUser/login")
-  //page.waitForLoadState()
-  //await page.goto("http://10.0.0.64:3000/cellmaUser/login")
+
   await loginpage.enterUsername(logindata.username)
   await loginpage.enter_Password(logindata.password)
   await loginpage.clickOnLogin()
-  //await expect(page).toHaveURL("http://10.0.0.64:3000/cellmaUser/home")
-  //page.waitForLoadState()
-  //await page.goto("http://10.0.0.64:3000/cellmaUser/home")  
-  //await page.waitForTimeout(3000) 
+
   await homepage.clickOnPatientIcon()
-
-  await page.pause()
-  //await page.goto("http://10.0.0.64:3000/cellmaUser/patient/patientSearch")  
-  //await page.pause()
   await patientsearch.clickOnSearchButton()
-    // await expect(page.getByText('Identifier required')).toHaveText('Identifier required')
-    // await expect(page.getByText('Identification Id required')).toHaveText('Identification Id required')
-    // await patientsearch.enterPatientIdentifier()
-    await patientsearch.enterGivenName(patientdetailsdata.New_GivenName)
-    await patientsearch.enterFamilyName(patientdetailsdata.New_FamilyName)
-    
-    await patientsearch.selectSex(patientdetailsdata.SexM)   
-    
-    //await patientsearch.enterPatientIdentificationId()
-
   // await expect(page.getByText('Identifier required')).toHaveText('Identifier required')
   // await expect(page.getByText('Identification Id required')).toHaveText('Identification Id required')
   // await patientsearch.enterPatientIdentifier()
+  await patientsearch.enterGivenName(patientdetailsdata.New_GivenName)
+  await patientsearch.enterFamilyName(patientdetailsdata.New_FamilyName)
+
+  await patientsearch.selectSex(patientdetailsdata.SexM)
+
   await patientsearch.enterGivenName(patientdetailsdata.New_GivenName)
   await patientsearch.enterFamilyName(patientdetailsdata.New_FamilyName)
   await patientsearch.selectSex(patientdetailsdata.SexM)
@@ -281,18 +266,5 @@ test('Register New Patient @Functional @Regression', async ({ page }) => {
   await page.waitForTimeout(2000)
   await menu.clickOnMenubtn()
   await menu.clickOnLogout()
-
-  //Database Part
-  // const Pool=createPool({
-  //   host:"127.0.0.1:3310",
-  //   user:"admin",
-  //   password:"Welcome@123",
-  //   connectionLimit:"10"
-  // })
-  // Pool.query('SELECT * FROM cellma4_api_18may23.patients where pat_id=10995',(err,resp)=>{
-  //  return console.log(resp)
-
-  // })
-
-
+  
 });

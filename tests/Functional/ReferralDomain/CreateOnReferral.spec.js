@@ -51,7 +51,7 @@ test('Create On Referral @Functional @ReferralDomain', async ({ page }) => {
     await loginpage.enterUsername(logindata.username)
     await loginpage.enter_Password(logindata.password)
     await loginpage.clickOnLogin()
-    await page.pause()
+    
     await homepage.clickOnSideIconRejectedReferrals()
     await rejectserviceonreferral.clickOnMainLinks()
     await rejectserviceonreferral.clickOnLinkCreateServiceOnReferral()
@@ -80,7 +80,7 @@ test('Create On Referral @Functional @ReferralDomain', async ({ page }) => {
     await expect(page.getByText('Referral added successfully')).toHaveText('Referral added successfully')
     await rejectserviceonreferral.clickOnLinkCreateServiceOnReferral()
     await page.waitForTimeout(2000)
-    await page.pause()
+    //await page.pause()
     // await createonreferral.clickOnRejectLink()
     // await createonreferral.enterRejectReason()
     // await createonreferral.clickOnRejectReasonButton()
