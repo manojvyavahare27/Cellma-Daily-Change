@@ -38,12 +38,9 @@ class SetHPDairy{
         this.btnNext=page.getByTestId('Next')
 
         //Sidebar
-        this.openSidebar=page.getByLabel('Close Menu')
-        
+        this.openSidebar=page.getByLabel('Close Menu')        
         //HP/Non HP Service
         this.tabHPNonHPService=page.getByRole('button', { name: 'HP/Non HP Services' })
-
-
 
     }
        //Sidebar

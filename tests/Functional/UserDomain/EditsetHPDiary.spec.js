@@ -109,17 +109,16 @@ test('Edit User and Add Leave @User Domain', async ({page}) => {
     await hpdiary.selectWeekwiseView()
     await hpdiary.selectmonthwiseView()
     await hpdiary.changeDate()
-    await hpdiary.clickOnDate()
-   // await hpdiary.selectLeaveType()
+    await hpdiary.clickOnDate()   
     await hpdiary.selectLeaveType()
     await hpdiary.checkCheckboxDays()
     await hpdiary.selectLeaveType()
     await hpdiary.enterLeavesStartDate()
     await hpdiary.enterLeavesEndDate()
-    //await page.pause()
+    
     await hpdiary.clickOnSaveLeaveButton()
     //await page.pause()
-    await page.pause()
+    
     //Sidebar Functionality
     await sethpdairy.clickOnOpenSidebar()
     await sethpdairy.clickOnOpenSidebar()
@@ -133,9 +132,6 @@ test('Edit User and Add Leave @User Domain', async ({page}) => {
     await usersearch.clickOnUserMonitoring()
     await usersearch.clickOnCancelPopup()
     await usersearch.clickOnTrainingPortal()
-    await usersearch.clickOnCancelPopup()
-    //await page.pause()
+    await usersearch.clickOnCancelPopup() 
 
-
-    
 });
