@@ -79,7 +79,7 @@ test('Edit User and Add Leave @User Domain', async ({page}) => {
     await sethpdairy.clickOnHpSchedlue()
     // await sethpdairy.clickOndeleteHPSchedule()
     // await sethpdairy.clickOnYesToDeleteHpSchedule()
-   
+    await page.pause()
     //await expect(page.getByText('Record deleted successfully')).toHaveText('Record deleted successfully')
 
     await sethpdairy.selectRepeatSchedule()

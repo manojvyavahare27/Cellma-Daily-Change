@@ -220,8 +220,7 @@ test('Create New User @User Domain', async ({page}) => {
     await sethpdairy.enterClinicScheduleWorkingHrsEndTime()
     await sethpdairy.selectClinicScheduleOccuranceType()
     await sethpdairy.selectClinicScheduleOccurance()    
-    await page.waitForTimeout(3000)
-    //await page.pause()
+    await page.waitForTimeout(3000)    
     await sethpdairy.clickOnSavebnt()
     await sethpdairy.clickOnNextbtn()
    
