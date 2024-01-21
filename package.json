@@ -1,13 +1,16 @@
 {
-  "name": "cellma-daily-change-manoj",
-  "version": "1.0.0",
+  "name": "playwright_with_javascripts",
+  "version": "^1.41.1",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "testCase": "npx playwright test ./tests/Functional/AdminDomain/SetClinic.spec.js --project=chrome --headed --workerd=1"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.41.0"
+    "@playwright/test": "^1.41.1",
+    "allure-playwright": "^2.11.1"
   }
 }
