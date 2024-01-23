@@ -141,7 +141,7 @@ test('Service Appointment @Appt',async ({page})=>{
      await servicebookapp.clickOnHPnameLink(serviceappdetails.HPNameLink)  
      await servicebookapp.clickOnShowCalendarbtn()
      
-     //await page.pause()
+     await page.pause()
      //Select Morning Slots
      await servicebookapp.clickOnMorningSlotstoAddApp(serviceappdetails.AddPatientSlot)
     // await expect(page.getByText('Appointment slot selected for 11: AM')).toHaveText('Appointment slot selected for 11:25 AM')     

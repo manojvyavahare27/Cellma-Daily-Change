@@ -80,7 +80,9 @@ test('Service Appointment @AdminDomain',async ({page})=>{
     //Add Room Schedule 1
     
     await setrooms.selectRoomSchedule1ActivityType()
+    await page.waitForTimeout(2000)
     await setrooms.selectStartDateRoomSchedule1()
+    await page.waitForTimeout(2000)
     await setrooms.selectEndDateRoomSchedule1()    
     await setrooms.selectStartTimeRoomSchedule1()                                        
     await setrooms.selectEndTimeRoomSchedule1()
@@ -92,10 +94,12 @@ test('Service Appointment @AdminDomain',async ({page})=>{
     await setrooms.ClickOnEditRoomDetails()
     await setrooms.ClickOnAddAdditionalRoomLink1()
 
-    await page.pause()
+   // await page.pause()
     //Add Room Schedule 2
     await setrooms.selectRoomSchedule1ActivityType2()
+    await page.waitForTimeout(2000)
     await setrooms.selectStartDateRoomSchedule2()
+    await page.waitForTimeout(2000)
     await setrooms.selectEndDateRoomSchedule2()    
     await setrooms.selectStartTimeRoomSchedule2()                                        
     await setrooms.selectEndTimeRoomSchedule2()
@@ -109,9 +113,11 @@ test('Service Appointment @AdminDomain',async ({page})=>{
 
 
     //Add Room Schedule 3
-    await page.pause()
+   // await page.pause()
     await setrooms.selectRoomSchedule1ActivityType3()
+    await page.waitForTimeout(2000)
     await setrooms.selectStartDateRoomSchedule3()
+    await page.waitForTimeout(2000)
     await setrooms.selectEndDateRoomSchedule3()    
     await setrooms.selectStartTimeRoomSchedule3()                                        
     await setrooms.selectEndTimeRoomSchedule3()
@@ -124,9 +130,11 @@ test('Service Appointment @AdminDomain',async ({page})=>{
     await setrooms.ClickOnAddAdditionalRoomLink1()
 
     //Add Room Schedule 4
-    await page.pause()
+   // await page.pause()
     await setrooms.selectRoomSchedule1ActivityType4()
+    await page.waitForTimeout(2000)
     await setrooms.selectStartDateRoomSchedule4()
+    await page.waitForTimeout(2000)
     await setrooms.selectEndDateRoomSchedule4()    
     await setrooms.selectStartTimeRoomSchedule4()                                        
     await setrooms.selectEndTimeRoomSchedule4()
@@ -139,9 +147,11 @@ test('Service Appointment @AdminDomain',async ({page})=>{
     await setrooms.ClickOnAddAdditionalRoomLink1()
 
     //Add Room Schedule 5
-    await page.pause() 
+    //await page.pause() 
     await setrooms.selectRoomSchedule1ActivityType5()
+    await page.waitForTimeout(2000)
     await setrooms.selectStartDateRoomSchedule5()
+    await page.waitForTimeout(2000)
     await setrooms.selectEndDateRoomSchedule5()    
     await setrooms.selectStartTimeRoomSchedule5()                                        
     await setrooms.selectEndTimeRoomSchedule5()

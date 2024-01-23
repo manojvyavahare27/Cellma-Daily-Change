@@ -87,6 +87,7 @@ class SetRooms
       this.btnExpandRow=page.getByLabel('expandRowIconundefined')
       //Delete 5th records
       this.delete5thChildRecord=page.getByRole('cell', { name: 'Room Schedule Activity Type : Test 1 Start Date : 01/12/2023 End Time : 05:00 End Date : 05/12/2023 Room Status : Available Start Time : 02:00 Reason : Added for testing delete hideLabel Activity Type : Test 1 Start Date : 06/12/2023 End Time : 08:00 End Date : 10/12/2023 Room Status : Available Start Time : 05:30 Reason : Added for testing 2 delete hideLabel Activity Type : Test 1 Start Date : 11/12/2023 End Time : 08:00 End Date : 15/12/2023 Room Status : Available Start Time : 05:30 Reason : Added for testing 3 delete hideLabel Activity Type : Test 1 Start Date : 16/12/2023 End Time : 08:00 End Date : 19/12/2023 Room Status : Available Start Time : 05:30 Reason : Added for testing 4 delete hideLabel Activity Type : Test 1 Start Date : 20/12/2023 End Time : 08:00 End Date : 24/12/2023 Room Status : Available Start Time : 05:30 Reason : Added for testing 5 delete hideLabel' }).getByLabel('delete').nth(4)
+                                   //getByRole('cell', { name: 'Room Schedule Activity Type : Test 1 Start Date : 01/12/2023 End Time : 05:00 End Date : 05/12/2023 Room Status : Available Start Time : 02:00 Reason : Added for testing delete hideLabel Activity Type : Test 1 Start Date : 06/12/2023 End Time : 08:00 End Date : 10/12/2023 Room Status : Available Start Time : 05:30 Reason : Added for testing 2 delete hideLabel Activity Type : Test 1 Start Date : 11/12/2023 End Time : 08:00 End Date : 15/12/2023 Room Status : Available Start Time : 05:30 Reason : Added for testing 3 delete hideLabel Activity Type : Test 1 Start Date : 16/12/2023 End Time : 08:00 End Date : 19/12/2023 Room Status : Available Start Time : 05:30 Reason : Added for testing 4 delete hideLabel Activity Type : Test 1 Start Date : 20/12/2023 End Time : 08:00 End Date : 24/12/2023 Room Status : Available Start Time : 05:30 Reason : Added for testing 5 delete hideLabel' }).getByLabel('delete').nth(4)
       this.delete4thChildRecord=page.getByLabel('delete').nth(4)
                                      //getByRole('cell', { name: 'Room Schedule Activity Type : Test 1 Start Date : 01/11/2023 End Time : 05:00 End Date : 05/11/2023 Room Status : Available Start Time : 02:00 Reason : Added for testing delete hideLabel Activity Type : Test 1 Start Date : 06/11/2023 End Time : 08:00 End Date : 10/11/2023 Room Status : Available Start Time : 05:30 Reason : Added for testing 2 delete hideLabel Activity Type : Test 1 Start Date : 11/11/2023 End Time : 08:00 End Date : 15/11/2023 Room Status : Available Start Time : 05:30 Reason : Added for testing 3 delete hideLabel Activity Type : Test 1 Start Date : 16/11/2023 End Time : 08:00 End Date : 19/11/2023 Room Status : Available Start Time : 05:30 Reason : Added for testing 4 delete hideLabel Activity Type : Test 1 Start Date : 20/11/2023 End Time : 08:00 End Date : 24/11/2023 Room Status : Available Start Time : 05:30 Reason : Added for testing 4 delete hideLabel' }).getByLabel('delete').nth(4)
       this.bntYesToDelete=page.getByTestId('Yes')
@@ -158,11 +159,11 @@ class SetRooms
 
     async selectStartDateRoomSchedule5()
     {
-       await this.StartDateRoomSchedule5.type("20/12/2023")
+       await this.StartDateRoomSchedule5.fill("20/12/2023")
     }
     async selectEndDateRoomSchedule5()
     {
-       await this.EndDateRoomSchedule5.type("24/12/2023")
+       await this.EndDateRoomSchedule5.fill("24/12/2023")
     }
     async selectStartTimeRoomSchedule5()
     {
@@ -199,11 +200,11 @@ class SetRooms
 
     async selectStartDateRoomSchedule4()
     {
-       await this.StartDateRoomSchedule4.type("16/12/2023")
+       await this.StartDateRoomSchedule4.fill("16/12/2023")
     }
     async selectEndDateRoomSchedule4()
     {
-       await this.EndDateRoomSchedule4.type("19/12/2023")
+       await this.EndDateRoomSchedule4.fill("19/12/2023")
     }
     async selectStartTimeRoomSchedule4()
     {
@@ -238,11 +239,11 @@ class SetRooms
 
      async selectStartDateRoomSchedule3()
      {
-        await this.StartDateRoomSchedule3.type("11/12/2023")
+        await this.StartDateRoomSchedule3.fill("11/12/2023")
      }
      async selectEndDateRoomSchedule3()
      {
-        await this.EndDateRoomSchedule3.type("15/12/2023")
+        await this.EndDateRoomSchedule3.fill("15/12/2023")
      }
      async selectStartTimeRoomSchedule3()
      {
@@ -277,11 +278,11 @@ class SetRooms
 
      async selectStartDateRoomSchedule2()
      {
-        await this.StartDateRoomSchedule2.type("06/12/2023")
+        await this.StartDateRoomSchedule2.fill("06/12/2023")
      }
      async selectEndDateRoomSchedule2()
      {
-        await this.EndDateRoomSchedule2.type("10/12/2023")
+        await this.EndDateRoomSchedule2.fill("10/12/2023")
      }
      async selectStartTimeRoomSchedule2()
      {
@@ -316,11 +317,11 @@ class SetRooms
 
      async selectStartDateRoomSchedule1()
      {
-        await this.StartDateRoomSchedule1.type("01/12/2023")
+        await this.StartDateRoomSchedule1.fill("01/12/2023")
      }
      async selectEndDateRoomSchedule1()
      {
-        await this.EndDateRoomSchedule1.type("05/12/2023")
+        await this.EndDateRoomSchedule1.fill("05/12/2023")
      }
 
      async selectStartTimeRoomSchedule1()

@@ -147,9 +147,9 @@ class ServiceBookApp
         //await this.selectMorningSlot.AppSlot.click()
     }
 
-    async clickOnAfterNoonSlots(RescheduledAppSlot)
+    async clickOnAfterNoonSlots(AgainscheduledAppSlot)
     {
-        await this.page.getByTestId(RescheduledAppSlot).click()
+        await this.page.getByTestId(AgainscheduledAppSlot).click()
         //await this.selectMorningSlot.AppSlot.click()
     }
     //Communication Consents
