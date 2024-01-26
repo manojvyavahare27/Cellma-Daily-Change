@@ -28,7 +28,7 @@ test('Add Referral Details @ReferralPortal',async ({page})=>{
     
 
     await page.goto(environment.RefPortal)   
-    //await page.pause() 
+    await page.pause() 
     await portalhome.clickOnReferralPortalButton()
     await loginpage.enterReferralPortalUserName(logindata.username)    
     await loginpage.enterRefrralPortalPassword(logindata.password);

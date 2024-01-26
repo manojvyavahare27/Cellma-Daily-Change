@@ -62,7 +62,7 @@ class AddEditPatientAppointment
      async selectConsultant()
      {
         await this.dropdownCosultant.click()
-        await this.page.getByRole('option', { name: 'Mr Manoj Tester' }).click()
+        await this.page.getByRole('option', { name: 'Mr Prerelease AutoEst' }).click()
      }
      async selectAppointmentDuration()
      {

@@ -9,6 +9,7 @@ class RejectServiceOnReferral
         
 
     }
+    
     async clickOnMainLinks()
     {
         await this.mainlinks.click()

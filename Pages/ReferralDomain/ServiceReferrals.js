@@ -3,6 +3,9 @@ class ServiceReferrals
     constructor(page)
     {
         this.page=page
+        this.btnReferrals=page.getByTestId('referrals')
+        this.btnMenu=page.getByTestId('Menu')
+        this.btnLogout=page.getByText('Logout')
         //Appointment Tab
         this.sidebarlinkAddAppointments = page.getByRole('button', { name: 'Add Appointments' })
         this.sidebarlinkServiceAppointment = page.getByRole('button', { name: 'Service Appointments' })
@@ -88,6 +91,19 @@ class ServiceReferrals
        this.btnCustomizableView=page.getByRole('menuitem', { name: 'Customizable View' })
     }
 
+    async ClickOnReferralIcon()
+    {
+        await this.btnReferrals.click()
+    }
+    async clickOnMenu()
+    {
+        await this.btnMenu.click()
+    }
+    async ClickOnLogout()
+    {
+        await this.btnLogout.click()
+    }
+
     //Customisable Service Referral
     async clickOnSettingButton()
     {
@@ -144,11 +160,18 @@ class ServiceReferrals
         await this.linkPatientName.click()
     }
     //Service Referral page
-    async enterStartDate() {
-        await this.txtboxStartDate.type('01/12/2023')
+    // async enterStartDate() {
+    //     await this.txtboxStartDate.type('01/12/2023')
+    // }
+    // async enterEndDate() {
+    //     await this.txtboxEndDate.type('31/12/2023')
+    // }
+
+    async enterStartDate(StartDate) {
+        await this.txtboxStartDate.fill(StartDate)
     }
-    async enterEndDate() {
-        await this.txtboxEndDate.type('31/12/2023')
+    async enterEndDate(EndDate) {
+        await this.txtboxEndDate.fill(EndDate)
     }
     async selectStatusTypeAwaitingAcceptance() {
         await this.dropdownStatusType.click()

@@ -1,11 +1,11 @@
 {
     "HPNameLink":"Mr Prerelease AutoEst",
+    
+    "AddPatientSlot":"07:00 AM",  
     "NewAppSlot":"09:20 AM",
-    "AddPatientSlot":"09:25 AM",
-
     "AddEditPatientSlot":"12:30 PM ",
-    "RescheduledAppSlot":"04:35 PM",
-    "AgainscheduledAppSlot":"04:40 PM",
+    "RescheduledAppSlot":"04:05 PM",
+    "AgainscheduledAppSlot":"04:10 PM",
     "NextAvalAppSlot":"09:30 AM",
 
     "startdate":"26/12/2023",

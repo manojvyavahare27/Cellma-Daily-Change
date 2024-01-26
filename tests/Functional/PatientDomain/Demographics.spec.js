@@ -149,7 +149,7 @@ test('Demographics changes for Patient @Functional', async ({page}) => {
     await editpatient.clickOnSaveForPatientDetails() 
    // await expect(page.getByText('Patient address added successfully')).toHaveText('Patient address added successfully')
     await editpatient.clickOnPatientPIP()    
-    await page.pause()
+    //await page.pause()
     await editpatient.enterIntoSearchGP('Wednesday')
 
     await editpatient.clickOnViewPIPLink()

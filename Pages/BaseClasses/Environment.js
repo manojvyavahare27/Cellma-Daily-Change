@@ -9,5 +9,6 @@ export default class Environment{
        // this.Test1="https://10.0.0.99/cellmaUserAPI/swagger-ui/index.html"
        // this.Test="https://10.0.0.63/cellmaUser/login"
        this.RefPortal="http://10.0.0.106:3001/cellmaPortal/portal/home"
+       this.ReleaseCellma="https://testcellma.com/cellmaUser/login"
     }     
 }

@@ -255,6 +255,7 @@ else{
      await expect(page.getByText('Communication consent saved successfully')).toHaveText('Communication consent saved successfully')     
     
 
+     await page.pause()
       //Edit Patient App.
     await scheduleserviceapp.clickOnDateLink()
     //await addeditpatientappointment.selectTypeOfAppointment()
@@ -396,8 +397,8 @@ await expect(page.getByText('Patient appointment cancelled successfully')).toHav
 //     //await scheduleserviceapp.selectAppCancellationReason()
 //     await scheduleserviceapp.clickOnSaveCancelledAppButton()
 //     await expect(page.getByText('Appointment status saved successfully')).toHaveText('Appointment status saved successfully')     
-    await menu.clickOnMenubtn()
-    await menu.clickOnLogout()
+    // await menu.clickOnMenubtn()
+    // await menu.clickOnLogout()
     
 
 

@@ -97,10 +97,17 @@ class AddReferralDetails
         await this.dropdownClinicalPriority.click()
         await this.page.getByRole('option', { name: 'Priority 1' }).click()
     }
+
     async selectConsultant()
     {
         await this.dropdownConsultant.click()
         await this.page.getByRole('option', { name: 'Miss Dhanashree Abnave' }).click()
+    }
+    
+    async selectConsultant1()
+    {
+        await this.dropdownConsultant.click()
+        await this.page.getByRole('option', { name: 'Dr. Tushar Patil' }).click()
     }
     async enterTimeOfReferral()
     {
@@ -108,7 +115,7 @@ class AddReferralDetails
     }
     async enterDateOfReferral()
     {
-        await this.txtboxDateOfReferral.type('10/01/2024')
+        await this.txtboxDateOfReferral.fill('25/01/2024')
     }
     async selectClinicLocation()
     {
@@ -116,21 +123,43 @@ class AddReferralDetails
         await this.page.locator('#referralServiceClinicLocation-option-0').click()
     }
 
+    async selectClinicLocation1()
+    {
+        await this.dropdownClinicLocation.click()
+        await this.page.getByRole('option', { name: 'Unit 1' }).click()
+    }
+
     async selectClinicType()
     {
         await this.dropdownClinicType.click()
         await this.page.getByRole('option', { name: 'Cardiology' }).click()
+    }
+    async selectClinicType1()
+    {
+        await this.dropdownClinicType.click()
+        await this.page.getByRole('option', { name: 'Oncology' }).click()
     }
     async selectService()
     {
         await this.dropdownService.click()
         await this.page.getByRole('option', { name: 'Cardiology' }).click()
     }
+    async selectService1()
+    {
+        await this.dropdownService.click()
+        await this.page.getByRole('option', { name: 'Oncology', exact: true }).click()
+    }
     async clickOnServiceReferralAccordion()
     {
         await this.btnserviceReferralAccordion.click()
     }
     async selectEstablishment()
+    {
+        await this.dropdownestiblishment.click()
+        await this.page.getByRole('option', { name: 'RioMed Demosite' }).click()
+    }
+
+    async selectEstablishment1()
     {
         await this.dropdownestiblishment.click()
         await this.page.getByRole('option', { name: 'RioMed Demosite' }).click()

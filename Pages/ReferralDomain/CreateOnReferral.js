@@ -29,8 +29,15 @@ class CreateOnReferral
                             // getByRole('row', { name: '01/01/2024 787674 B/O LinuxA Riomedtest HP Region1 Cardio Location Cardiology - messages document Add 10731clinicalPriority Accept Reject bookAppointment inviteSentSuccessfully addedToWaitingList awaiting acceptance - Completely Reject -' }).getByTestId('Reject')  
         this.txtboxRejectRason=page.getByTestId('Reason')
         this.btnRejectOnPopUp=page.getByTestId('CommonCellmaPopup').getByTestId('Reject')
+        //this.linkCompletlyReject2ndRecord=page.getByText('Completely Reject').nth(2)
+        this.linkCompletlyReject2ndRecord=page.getByRole('cell',{name:'Reject'}).nth(2)
+
 
     }   
+    async clickOnCompletlyRejectToDelete()
+    {
+        await this.linkCompletlyReject2ndRecord.click()
+    }
     async clickOnRejectReasonButton()
     {
         await this.btnRejectOnPopUp.click()
