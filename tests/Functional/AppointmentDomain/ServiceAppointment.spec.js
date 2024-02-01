@@ -53,9 +53,27 @@ test('Service Appointment @Appt',async ({page})=>{
     await serviceapp.enterEndDate(serviceappdetails.enddate)
     await serviceapp.clickOnSeachButton()
     await page.pause()
-    await serviceapp.clickOnAppTypeLink()
-    await serviceapp.clickOnNewAppTypeLink()    
+    const AppStatus=page.getByRole('button', { name: 'New' }).isVisible()
+    if(AppStatus==false)    
+    {
+        await page.pause()
+    await serviceapp.clickOnEmergencyAppTypeLink()
+    await page.pause()
+    await serviceapp.SelectOnNewAppTypeLink()    
     await serviceapp.clickOnChangeButton()
+    }
+    else
+    {
+        await page.pause()
+
+   // await serviceapp.clickOnNewAppTypeLink()
+   await serviceapp.clickOnEmergencyAppTypeLink()
+    await page.pause()
+    //await serviceapp.SelectOnEmegrgencyAppTypeLink()    
+    await serviceapp.SelectOnNewAppTypeLink()
+    await serviceapp.clickOnChangeButton()
+    }
+
     await expect(page.getByText('Appointment type has been changed successfully')).toHaveText('Appointment type has been changed successfully')     
     
     await page.pause()

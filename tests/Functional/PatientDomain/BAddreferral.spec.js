@@ -47,7 +47,7 @@ test('Confirm Existing Details @Functional @ReferralDomain', async ({ page }) =>
     await loginpage.enterUsername(logindata.username)
     await loginpage.enter_Password(logindata.password)
     await loginpage.clickOnLogin()
-        await homepage.clickOnPatientIcon()
+    await homepage.clickOnPatientIcon()
     await patientsearch.clickOnSearchButton()
     await patientsearch.enterGivenName(patientdetailsdata.New_GivenName)
     await patientsearch.enterFamilyName(patientdetailsdata.New_FamilyName)

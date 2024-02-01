@@ -30,7 +30,8 @@ class ServiceAppointment
         this.btnSearch=page.getByTestId('Search')
         this.txtStartDate=page.getByTestId('Start Date').getByPlaceholder('dd/mm/yyyy')
         this.txtEndDate=page.getByTestId('End Date').getByPlaceholder('dd/mm/yyyy')
-        this.linkAppType=page.getByRole('button', { name: 'New' })  
+        this.linkAppTypeEmergency=page.getByRole('button', { name: 'Emergency' })  
+        this.linkAppTypeNew=page.getByRole('button', { name: 'New' })  
         this.dropdownAppTypePopup=page.getByTestId('appointmentType').getByLabel('Open')
         this.btnChangeAppTypePopup=page.getByTestId('Change')
         this.linkLocation=page.getByRole('button', { name: 'Cath Lab Location' })
@@ -42,15 +43,26 @@ class ServiceAppointment
         await this.btnChangeAppTypePopup.click(0)
     }
 
-    async clickOnNewAppTypeLink()
+    async SelectOnEmegrgencyAppTypeLink()
     {
         await this.dropdownAppTypePopup.click()
-        await this.page.getByRole('option', { name: 'Emergency' }).click()
+        await this.page.getByRole('option', { name: 'Emergency', exact: true }).click()
 
     }
-    async clickOnAppTypeLink()
+    async SelectOnNewAppTypeLink()
     {
-        await this.linkAppType.click()
+        await this.dropdownAppTypePopup.click()
+        await this.page.getByRole('option', { name: 'New', exact: true }).click()
+
+    }
+    async clickOnEmergencyAppTypeLink()
+    {
+        await this.linkAppTypeEmergency.click()
+    }
+
+    async clickOnNewAppTypeLink()
+    {
+        await this.linkAppTypeNew.click()
     }
     async enterStartDate(startdate)
     {
@@ -59,8 +71,7 @@ class ServiceAppointment
     async enterEndDate(enddate)
     {
         await this.txtEndDate.type(enddate)
-    }
-    
+    }   
 
     async clickOnSeachButton()
     {

@@ -6,7 +6,8 @@ class ServiceBookApp
     constructor(page)
     {
         this.page=page
-        this.afternoonSlot=page.getByTestId('Mr Prerelease AutoEst  12:00 PM')
+        //this.afternoonSlot=page.getByTestId('Mr Prerelease AutoEst  12:00 PM')
+        this.afternoonSlot=page.getByTestId('Mr Manoj Vyavahare  12:00 PM')
 
         //links
 
